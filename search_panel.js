@@ -32,7 +32,7 @@ for (let i = 0; i < search_type.length; i ++) {
     elem.innerText = value;
     elem.classList.add('search_button_content_item');
     elem.addEventListener("click", function() {
-        document.getElementById("search_bar").value = value;
+        document.getElementById("search_bar").placeholder = value;
         document.getElementById("search_button_text").textContent = value;
         toggleSearchContent();
     });
