@@ -1,0 +1,51 @@
+classId,lec_dis,status,total_spots,enrolled_spots,waitlist_status,days,start_time,end_time,location,units,instructors
+MATH0003B,Lec 1,Open,70,0,No Waitlist,MWF,10,10:50,Mathematical Sciences 52,4.0,"Greene, M.P."
+MATH0031A,Lec 1,Open,210,0,No Waitlist,MWF,8,8:50,Mathematical Sciences 400,4.0,"Dallas, H.J."
+MATH0031A,Lec 2,Open,210,0,No Waitlist,MWF,12,12:50,Mathematical Sciences 400,4.0,"Keranen, J.P."
+MATH0031A,Lec 3,Open,210,0,No Waitlist,MWF,1,1:50,Mathematical Sciences 400,4.0,The Staff
+MATH0031AL,Lec 1,Open,176,0,No Waitlist,MWFT,5,5:50,"Rolfe Hall 1200, Moore Hall 100",5.0,"Conley, W.J."
+MATH0031B,Lec 1,Open,210,0,No Waitlist,MWF,9,9:50,Mathematical Sciences 400,4.0,"Johnson, C.L."
+MATH0031B,Lec 2,Open,210,0,No Waitlist,MWF,10,10:50,Young Hall CS,4.0,"Arant, T.J."
+MATH0031B,Lec 3,Open,210,0,No Waitlist,MWF,1,1:50,Young Hall CS,4.0,"Zhang, Z."
+MATH0031B,Lec 4,Open,210,0,No Waitlist,MWF,3,3:50,Young Hall CS,4.0,"Flynn, P."
+MATH0031B,Lec 5,Open,210,0,No Waitlist,MWF,4,4:50,Broad Art Center 216,4.0,The Staff
+MATH0032A,Lec 1,Open,210,0,No Waitlist,MWF,10,10:50,Mathematical Sciences 400,4.0,"Vashaw, K."
+MATH0032A,Lec 2,Open,210,0,No Waitlist,MWF,11,11:50,Mathematical Sciences 400,4.0,"Khitrik, M."
+MATH0032A,Lec 3,Open,210,0,No Waitlist,MWF,1,1:50,Franz Hall 11,4.0,"Li, L."
+MATH0032A,Lec 4,Open,210,0,No Waitlist,MWF,3,3:50,Young Hall CS,4.0,"Kan, K."
+MATH0032B,Lec 1,Open,210,0,No Waitlist,MWF,9,9:50,Franz Hall 11,4.0,"Beers, D."
+MATH0032B,Lec 2,Open,210,0,No Waitlist,MWF,12,12:50,Rolfe Hall 12,4.0,"Diepeveen, W."
+MATH0032B,Lec 3,Open,210,0,No Waitlist,MWF,4,4:50,Mathematical Sciences 400,4.0,"Tan, H."
+MATH0033A,Lec 1,Open,210,0,No Waitlist,MWF,11,11:50,Rolfe Hall 12,4.0,The Staff
+MATH0033A,Lec 2,Open,203,0,No Waitlist,MWF,12,12:50,Franz Hall 11,4.0,"Venkatesh, S."
+MATH0033B,Lec 1,Open,210,0,No Waitlist,MWF,9,9:50,Young Hall CS,4.0,"Zhao, Z."
+MATH0033B,Lec 2,Open,210,0,No Waitlist,MWF,2,2:50,Mathematical Sciences 400,4.0,"Munoz, S."
+MATH0061,Lec 1,Open,210,0,No Waitlist,MWF,2,2:50,Franz Hall 11,4.0,The Staff
+MATH0061,Lec 2,Open,210,0,No Waitlist,MWF,3,3:50,Mathematical Sciences 400,4.0,"Kasum, O."
+MATH0074XP,Sem 1,Open,30,0,No Waitlist,T,2,3:50,Mathematical Sciences 52,3.0,"Chan, H.H."
+MATH0105B,Lec 1,Open,25,0,No Waitlist,MW,1,2:50,Mathematical Sciences 62,4.0,"Lopez, I."
+MATH0106,Lec 1,Open,80,0,No Waitlist,MWF,10,10:50,Public Affairs Building 12,4.0,"Xu, P."
+MATH0110A,Lec 1,Open,40,0,No Waitlist,MWF,11,11:50,Geology Building 67,4.0,"Vashaw, K."
+MATH0110B,Lec 1,Open,40,0,No Waitlist,MWF,10,10:50,Mathematical Sciences 51,4.0,"Keranen, J.P."
+MATH0110BH,Lec 1,Open,40,0,No Waitlist,MWF,1,1:50,Geology Building 67,4.0,The Staff
+MATH0114C,Lec 1,Open,40,0,No Waitlist,MWF,9,9:50,Geology Building 67,4.0,The Staff
+MATH0115A,Lec 1,Open,40,0,No Waitlist,MWF,9,9:50,Mathematical Sciences 62,5.0,"Yeong, W."
+MATH0115A,Lec 2,Open,40,0,No Waitlist,MWF,10,10:50,Mathematical Sciences 62,5.0,"Yeong, W."
+MATH0115A,Lec 3,Open,40,0,No Waitlist,MWF,11,11:50,Mathematical Sciences 62,5.0,The Staff
+MATH0115A,Lec 4,Open,40,0,No Waitlist,MWF,12,12:50,Mathematical Sciences 62,5.0,The Staff
+MATH0115A,Lec 5,Open,40,0,No Waitlist,MWF,1,1:50,Mathematical Sciences 62,5.0,"Yanez Etcheberry,"
+MATH0115A,Lec 6,Open,40,0,No Waitlist,MWF,3,3:50,Mathematical Sciences 62,5.0,The Staff
+MATH0115AH,Lec 1,Open,30,0,No Waitlist,MWF,1,1:50,Mathematical Sciences 51,5.0,"Greene, R.E."
+MATH0115B,Lec 1,Open,40,0,No Waitlist,MWF,10,10:50,Geology Building 67,4.0,"Nienhaus, J."
+MATH0118,Lec 1,Open,40,0,No Waitlist,MWF,9,9:50,Mathematical Sciences 51,4.0,"Baker, J."
+MATH0120A,Lec 1,Open,40,0,No Waitlist,MWF,12,12:50,Mathematical Sciences 51,4.0,"Ebert, M."
+MATH0131A,Lec 1,Open,40,0,No Waitlist,MWF,9,9:50,Geology Building 46,4.0,"Arant, T.J."
+MATH0131A,Lec 2,Open,40,0,No Waitlist,MWF,10,10:50,Geology Building 46,4.0,The Staff
+MATH0131A,Lec 3,Open,40,0,No Waitlist,MWF,11,11:50,Geology Building 46,4.0,The Staff
+MATH0131A,Lec 4,Open,40,0,No Waitlist,MWF,1,1:50,Geology Building 46,4.0,The Staff
+MATH0131A,Lec 5,Open,40,0,No Waitlist,MWF,2,2:50,Mathematical Sciences 62,4.0,"Altaf, I."
+MATH0131A,Lec 6,Open,40,0,No Waitlist,MWF,3,3:50,Geology Building 46,4.0,"Altaf, I."
+MATH0131AH,Lec 1,Open,40,0,No Waitlist,MWF,11,11:50,Mathematical Sciences 51,4.0,"Biskup, M."
+MATH0131B,Lec 1,Open,40,0,No Waitlist,MWF,11,11:50,Mathematical Sciences 51,4.0,"Munoz, S."
+MATH0131B,Lec 2,Open,40,0,No Waitlist,MWF,2,2:50,Mathematical Sciences 51,4.0,"Ding, C."
+MATH0131BH,Lec 1,Open,40,0,No Waitlist,MWF,11,11:50,Mathematical Sciences 51,4.0,"Bedrossian, J.P."

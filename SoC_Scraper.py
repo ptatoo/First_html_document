@@ -1,10 +1,33 @@
+import csv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from time import sleep
 
-def searchSubject(subject: str, sub: str, term: str, driver):
+def parseStatus(text: str):
+    texts = text.split("\n")
+    texts[2] = texts[1].split(' ')[0]
+    texts[1] = texts[1].split(' ')[2]
+    return texts
+
+def parseTime(text: str):
+    texts = text.split("-")
+    texts[0] = texts[0][:-2]
+    texts[1] = texts[1][:-2]
+    return texts
+
+def parseLocation(text: str):
+    texts = text.split("\n")
+    output = ""
+    if (len(texts) > 1):
+        for text in texts:
+            output += text + ", "
+    else:
+        output = text
+    return output[:-2]
+
+def searchSubject(subject: str, sub: str, term: str, driver, class_writer, lec_writer):
     #open schedule of classes
     try:
         driver.get("https://sa.ucla.edu/ro/public/soc")
@@ -21,7 +44,6 @@ def searchSubject(subject: str, sub: str, term: str, driver):
     term_drop_down.click()
     specific_term = term_drop_down.find_element(By.CSS_SELECTOR, '[data-yeartext="Winter 2026"]')
     specific_term.click()
-    sleep(0.5)
 
     #find search bar shadow DOM
     shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '[id="select_filter_subject"]')
@@ -29,8 +51,8 @@ def searchSubject(subject: str, sub: str, term: str, driver):
     search_bar = shadow_root2.find_element(By.CSS_SELECTOR, '[id="IweAutocompleteContainer"]')
 
     #search for element and click drop down item
-    input = search_bar.find_element(By.CSS_SELECTOR, '[type="text"]')
-    input.send_keys(subject)
+    inpt = search_bar.find_element(By.CSS_SELECTOR, '[type="text"]')
+    inpt.send_keys(subject)
     drop_down = search_bar.find_element(By.CSS_SELECTOR, '[id="dropdownitems"]')
     drop_down_items = drop_down.find_elements(By.CSS_SELECTOR, '[tabindex="-1"]')
     for drop_down_item in drop_down_items:
@@ -47,14 +69,41 @@ def searchSubject(subject: str, sub: str, term: str, driver):
     while True:
         class_list = shadow_root.find_element(By.CSS_SELECTOR, '[id="resultsTitle"]')
         classes = class_list.find_elements(By.CSS_SELECTOR, '[class="row-fluid class-title"]')
+        #scrapes each class
         for cls in classes:
-            print(cls.get_attribute("id"))
+            class_id = cls.get_attribute("id")
+            cls.find_element(By.CSS_SELECTOR, '[class="linkLikeButton"]').click()
+            rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
+            rows = rows.find_elements(By.CSS_SELECTOR, '[class="row-fluid data_row primary-row class-info class-not-checked"]')
+            #each lecture is a row
+            for row in rows:
+                #open discussion rows
+                try:
+                    button = row.find_element(By.CSS_SELECTOR, '[class="transparentButton"]')
+                    button.click()
+                except:
+                    pass
+                #gather DATA
+                lec_dis = {}
+                lec_dis["classId"] = class_id
+                lec_dis["lec_dis"] = row.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
+                texts = parseStatus(row.find_element(By.CSS_SELECTOR, '[class="statusColumn"]').text)
+                lec_dis["status"] = texts[0]
+                lec_dis["total_spots"] = texts[1]
+                lec_dis["enrolled_spots"] = texts[2]
+                lec_dis["waitlist_status"] = row.find_element(By.CSS_SELECTOR, '[class="waitlistColumn"]').text
+                lec_dis["days"] = row.find_element(By.CSS_SELECTOR, '[class="dayColumn hide-small beforeCollapseHide"]').get_attribute("innerText").strip()
+                timing = row.find_element(By.CSS_SELECTOR, '[class="timeColumn"]').text.split("\n")
+                texts = parseTime(timing[-1])
+                lec_dis["start_time"] = texts[0]
+                lec_dis["end_time"] = texts[1]
+                lec_dis["location"] = parseLocation(row.find_element(By.CSS_SELECTOR, '[class="locationColumn hide-small"]').text)
+                lec_dis["units"] = row.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
+                lec_dis["instructors"] = row.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text
+                lec_writer.writerow(lec_dis)
+
         break
 
-    sleep(5)
-
-def parseClass():
-    print("asdf")
 
 #start chrome driver
 chrome_options = Options()
@@ -65,7 +114,17 @@ except:
     raise Exception("Failed to run webdriver.")
 driver.implicitly_wait(0.5)
 
-searchSubject("math", "(MATH)", "Winter 2026", driver)
+class_keys = ["classId"]
+class_file = open("classes.csv", "w", newline='')
+class_writer = csv.DictWriter(class_file, class_keys)
+class_writer.writeheader()
+
+lec_dis_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
+lec_dis_file = open("lec_dis.csv", "w", newline='')
+lec_writer = csv.DictWriter(lec_dis_file, lec_dis_keys)
+lec_writer.writeheader()
+
+searchSubject("math", "(MATH)", "Winter 2026", driver, class_writer, lec_writer)
 
 sleep(1)
 driver.quit()
