@@ -64,31 +64,44 @@ def searchSubject(subject: str, sub: str, term: str, driver):
     shadow_root2 = shadow_content.shadow_root
     search_bar = shadow_root2.find_element(By.CSS_SELECTOR, '[id="IweAutocompleteContainer"]')
 
-    #search for element and click drop down item
+    #search for element
     inpt = search_bar.find_element(By.CSS_SELECTOR, '[type="text"]')
     inpt.send_keys(subject)
     drop_down = search_bar.find_element(By.CSS_SELECTOR, '[id="dropdownitems"]')
     drop_down_items = drop_down.find_elements(By.CSS_SELECTOR, '[tabindex="-1"]')
+
+    #click drop down item
+    clicked = False
     for drop_down_item in drop_down_items:
         if sub in drop_down_item.text:
             drop_down_item.click()
+            clicked = True
+    if not clicked:
+        for drop_down_item in drop_down_items:
+            if sub[1:-1] in drop_down_item.text:
+                drop_down_item.click()
+                clicked = True
 
     #click go button
     go_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="div_btn_go"]')
     go_button.click()
 
-#searches for each
-def searchSection(driver, class_writer, lec_writer):
+#searches for each sectionand writes it to csv file
+def searchSection(driver, lec_writer):
     #find all sections
     shadow_host = driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
     shadow_root = shadow_host.shadow_root
 
     #find number of pages
-    pg = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]')
-    pgs = pg.find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
+    try:
+        pg = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]')
+        pgs = pg.find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
+    except:
+        pgs = [shadow_root]
 
     for num in pgs:
-        num.click()
+        if (len(pgs) != 1):
+            num.click()
         sleep(0.5)
         class_list = shadow_root.find_element(By.CSS_SELECTOR, '[id="resultsTitle"]')
         classes = class_list.find_elements(By.CSS_SELECTOR, '[class="row-fluid class-title"]')
@@ -146,30 +159,37 @@ def searchSection(driver, class_writer, lec_writer):
                     section_list["instructors"] = parseInstructor(section.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text)
                     lec_writer.writerow(section_list)
 
-#start chrome driver
-chrome_options = Options()
-#chrome_options.add_argument("--headless=new")
-try:
-    driver = webdriver.Chrome(options=chrome_options)
-except:
-    raise Exception("Failed to run webdriver.")
-driver.implicitly_wait(0.5)
+#searches for subject, searches for each section, writes it to csv file
+def scrapeSubject(subject: str, term, headless: bool):
+    #start chrome driver
+    chrome_options = Options()
+    if headless:
+        chrome_options.add_argument("--headless=new")
+    try:
+        driver = webdriver.Chrome(options=chrome_options)
+    except:
+        raise Exception("Failed to run webdriver.")
+    driver.implicitly_wait(0.5)
 
-class_keys = ["classId"]
-class_file = open("classes.csv", "w", newline='')
-class_writer = csv.DictWriter(class_file, class_keys)
-class_writer.writeheader()
+    #open up csv file
+    section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
+    section_file = open("./section_data/" + subject + ".csv", "w", newline='')
+    section_writer = csv.DictWriter(section_file, section_keys)
+    section_writer.writeheader()
 
-section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
-section_file = open("./section_data/MATH.csv", "w", newline='')
-section_writer = csv.DictWriter(section_file, section_keys)
-section_writer.writeheader()
+    #search and scrape and write
+    searchSubject(subject, "(" + subject + ")", term, driver)
+    searchSection(driver, section_writer)
+    section_file.close()
+    sleep(1)
+    driver.quit()
 
-searchSubject("math", "(MATH)", "Winter 2026", driver)
-searchSection(driver, class_writer, section_writer)
+# subjectList = open("SubjectsList.txt", "r")
+# for line in subjectList:
+#     line = line.strip()
+#     lines = line.split("(")
+#     if (len(lines) > 1):
+#         line = line.split("(")[1][:-1]
+#     scrapeSubject(line, "Winter 2026")
 
-class_file.close()
-section_file.close()
-
-sleep(1)
-driver.quit()
+scrapeSubject("Arabic", "Winter 2026", False)

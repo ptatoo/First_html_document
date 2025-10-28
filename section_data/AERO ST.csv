@@ -1,0 +1,6 @@
+classId,lec_dis,status,total_spots,enrolled_spots,waitlist_status,days,start_time,end_time,location,units,instructors
+AEROST0000A,Lab 1,Open,70,0,0 of 10 Taken,F,8,9:50,Kinsey Science Teaching Pavilion 1200B,0.0,"Flanagan, N."
+AEROST0001B,Lec 1,Open,45,0,No Waitlist,F,12,12:50,Student Activities Center B20B,2.0,"Flanagan, N."
+AEROST0020B,Lec 1,Open,45,0,No Waitlist,F,1,1:50,Student Activities Center B20B,2.0,"Flanagan, N."
+AEROST0130B,Lec 1,Open,45,0,No Waitlist,F,12,2:50,Student Activities Center 120P,4.0,"Tull, B."
+AEROST0140B,Lec 1,Open,45,0,No Waitlist,F,12,2:50,Student Activities Center 215,4.0,"Allison, M.A."
