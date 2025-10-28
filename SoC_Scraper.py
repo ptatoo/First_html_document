@@ -1,4 +1,5 @@
 import csv
+import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
@@ -102,23 +103,24 @@ def searchSection(driver, lec_writer):
     for num in pgs:
         if (len(pgs) != 1):
             num.click()
-        sleep(0.5)
+        sleep(0.25)
         class_list = shadow_root.find_element(By.CSS_SELECTOR, '[id="resultsTitle"]')
         classes = class_list.find_elements(By.CSS_SELECTOR, '[class="row-fluid class-title"]')
+
+        #expand all classes
+        expandAll = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
+        expandAll.click()
+        sleep(0.25)
+
         #scrapes each class
         for cls in classes:
             class_id = cls.get_attribute("id")
-            cls.find_element(By.CSS_SELECTOR, '[class="linkLikeButton"]').click()
             #trys to find the class twice, if not prints an error
             try:
                 rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
             except:
-                sleep(0.25)
-                try:
-                    rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
-                except:
-                    print("error: " + class_id)
-                    continue
+                print("error: " + class_id)
+                continue
                     
             rows = rows.find_elements(By.CSS_SELECTOR, '[class="row-fluid data_row primary-row class-info class-not-checked"]')
             #each lecture is a row
@@ -128,8 +130,7 @@ def searchSection(driver, lec_writer):
                 #open discussion rows and add them to list
                 disExists = False
                 try:
-                    button = row.find_element(By.CSS_SELECTOR, '[class="transparentButton"]')
-                    button.click()
+                    temp = row.find_element(By.CSS_SELECTOR, '[class="row-fluid data_row secondary-row class-info class-not-checked"]')
                     disExists = True
                 except:
                     pass
@@ -139,6 +140,7 @@ def searchSection(driver, lec_writer):
                     for secondaryRow in secondaryRows:
                         sections.append(secondaryRow)
                         
+                
                 #gather lecture and discussiondata
                 for section in sections:
                     section_list = {}
@@ -161,6 +163,8 @@ def searchSection(driver, lec_writer):
 
 #searches for subject, searches for each section, writes it to csv file
 def scrapeSubject(subject: str, term, headless: bool):
+    start_time = time.perf_counter()
+
     #start chrome driver
     chrome_options = Options()
     if headless:
@@ -183,6 +187,9 @@ def scrapeSubject(subject: str, term, headless: bool):
     section_file.close()
     sleep(1)
     driver.quit()
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print(f"Code execution time: {elapsed_time:.4f} seconds")
 
 # subjectList = open("SubjectsList.txt", "r")
 # for line in subjectList:
@@ -192,4 +199,4 @@ def scrapeSubject(subject: str, term, headless: bool):
 #         line = line.split("(")[1][:-1]
 #     scrapeSubject(line, "Winter 2026")
 
-scrapeSubject("Arabic", "Winter 2026", False)
+scrapeSubject("Math", "Winter 2026", False)
