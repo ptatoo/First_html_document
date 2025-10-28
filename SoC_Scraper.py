@@ -7,12 +7,17 @@ from time import sleep
 
 def parseStatus(text: str):
     texts = text.split("\n")
-    texts[2] = texts[1].split(' ')[0]
-    texts[1] = texts[1].split(' ')[2]
-    return texts
+    if texts[0] == "Open":
+        texts[2] = texts[1].split(' ')[0]
+        texts[1] = texts[1].split(' ')[2]
+        return texts
+    else:
+        return [texts[0], 0, 0]
 
 def parseTime(text: str):
     texts = text.split("-")
+    if len(texts) == 1:
+        return ["", ""]
     texts[0] = texts[0][:-2]
     texts[1] = texts[1][:-2]
     return texts
@@ -25,8 +30,17 @@ def parseLocation(text: str):
             output += text + ", "
     else:
         output = text
+        return output
     return output[:-2]
 
+def parseInstructor(text: str):
+    texts = text.split("\n")
+    output = ""
+    for t in texts:
+        output += t + "; "
+    return output[:-2]
+
+#searches for a particular subject
 def searchSubject(subject: str, sub: str, term: str, driver):
     #open schedule of classes
     try:
@@ -63,22 +77,42 @@ def searchSubject(subject: str, sub: str, term: str, driver):
     go_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="div_btn_go"]')
     go_button.click()
 
-def searchClasses(driver, class_writer, lec_writer):
-    #find all classes
+#searches for each
+def searchSection(driver, class_writer, lec_writer):
+    #find all sections
     shadow_host = driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
     shadow_root = shadow_host.shadow_root
-    while True:
+
+    #find number of pages
+    pg = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]')
+    pgs = pg.find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
+
+    for num in pgs:
+        num.click()
+        sleep(0.5)
         class_list = shadow_root.find_element(By.CSS_SELECTOR, '[id="resultsTitle"]')
         classes = class_list.find_elements(By.CSS_SELECTOR, '[class="row-fluid class-title"]')
         #scrapes each class
         for cls in classes:
             class_id = cls.get_attribute("id")
             cls.find_element(By.CSS_SELECTOR, '[class="linkLikeButton"]').click()
-            rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
+            #trys to find the class twice, if not prints an error
+            try:
+                rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
+            except:
+                sleep(0.25)
+                try:
+                    rows = cls.find_element(By.CSS_SELECTOR, '[id="' + class_id + '-children"]')
+                except:
+                    print("error: " + class_id)
+                    continue
+                    
             rows = rows.find_elements(By.CSS_SELECTOR, '[class="row-fluid data_row primary-row class-info class-not-checked"]')
             #each lecture is a row
             for row in rows:
-                #open discussion rows
+                sections = []
+                sections.append(row)
+                #open discussion rows and add them to list
                 disExists = False
                 try:
                     button = row.find_element(By.CSS_SELECTOR, '[class="transparentButton"]')
@@ -86,48 +120,31 @@ def searchClasses(driver, class_writer, lec_writer):
                     disExists = True
                 except:
                     pass
-                #gather lecture data
-                lec_dis = {}
-                lec_dis["classId"] = class_id
-                lec_dis["lec_dis"] = row.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
-                texts = parseStatus(row.find_element(By.CSS_SELECTOR, '[class="statusColumn"]').text)
-                lec_dis["status"] = texts[0]
-                lec_dis["total_spots"] = texts[1]
-                lec_dis["enrolled_spots"] = texts[2]
-                lec_dis["waitlist_status"] = row.find_element(By.CSS_SELECTOR, '[class="waitlistColumn"]').text
-                lec_dis["days"] = row.find_element(By.CSS_SELECTOR, '[class="dayColumn hide-small beforeCollapseHide"]').get_attribute("innerText").strip()
-                timing = row.find_element(By.CSS_SELECTOR, '[class="timeColumn"]').text.split("\n")
-                texts = parseTime(timing[-1])
-                lec_dis["start_time"] = texts[0]
-                lec_dis["end_time"] = texts[1]
-                lec_dis["location"] = parseLocation(row.find_element(By.CSS_SELECTOR, '[class="locationColumn hide-small"]').text)
-                lec_dis["units"] = row.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
-                lec_dis["instructors"] = row.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text
-                lec_writer.writerow(lec_dis)
+
                 if disExists:
                     secondaryRows = row.find_elements(By.CSS_SELECTOR, '[class="row-fluid data_row secondary-row class-info class-not-checked"]')
                     for secondaryRow in secondaryRows:
-                        lec_dis = {}
-                        lec_dis["classId"] = class_id
-                        lec_dis["lec_dis"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
-                        texts = parseStatus(secondaryRow.find_element(By.CSS_SELECTOR, '[class="statusColumn"]').text)
-                        lec_dis["status"] = texts[0]
-                        lec_dis["total_spots"] = texts[1]
-                        lec_dis["enrolled_spots"] = texts[2]
-                        lec_dis["waitlist_status"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="waitlistColumn"]').text
-                        lec_dis["days"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="dayColumn hide-small beforeCollapseHide"]').get_attribute("innerText").strip()
-                        timing = secondaryRow.find_element(By.CSS_SELECTOR, '[class="timeColumn"]').text.split("\n")
-                        texts = parseTime(timing[-1])
-                        lec_dis["start_time"] = texts[0]
-                        lec_dis["end_time"] = texts[1]
-                        lec_dis["location"] = parseLocation(secondaryRow.find_element(By.CSS_SELECTOR, '[class="locationColumn hide-small"]').text)
-                        lec_dis["units"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
-                        lec_dis["instructors"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text
-                        lec_writer.writerow(lec_dis)
-
-
-        break
-
+                        sections.append(secondaryRow)
+                        
+                #gather lecture and discussiondata
+                for section in sections:
+                    section_list = {}
+                    section_list["classId"] = class_id
+                    section_list["lec_dis"] = section.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
+                    texts = parseStatus(section.find_element(By.CSS_SELECTOR, '[class="statusColumn"]').text)
+                    section_list["status"] = texts[0]
+                    section_list["total_spots"] = texts[1]
+                    section_list["enrolled_spots"] = texts[2]
+                    section_list["waitlist_status"] = section.find_element(By.CSS_SELECTOR, '[class="waitlistColumn"]').text
+                    section_list["days"] = section.find_element(By.CSS_SELECTOR, '[class="dayColumn hide-small beforeCollapseHide"]').get_attribute("innerText").strip()
+                    timing = section.find_element(By.CSS_SELECTOR, '[class="timeColumn"]').text.split("\n")
+                    texts = parseTime(timing[-1])
+                    section_list["start_time"] = texts[0]
+                    section_list["end_time"] = texts[1]
+                    section_list["location"] = parseLocation(section.find_element(By.CSS_SELECTOR, '[class="locationColumn hide-small"]').text)
+                    section_list["units"] = section.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
+                    section_list["instructors"] = parseInstructor(section.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text)
+                    lec_writer.writerow(section_list)
 
 #start chrome driver
 chrome_options = Options()
@@ -143,16 +160,16 @@ class_file = open("classes.csv", "w", newline='')
 class_writer = csv.DictWriter(class_file, class_keys)
 class_writer.writeheader()
 
-lec_dis_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
-lec_dis_file = open("lec_dis.csv", "w", newline='')
-lec_writer = csv.DictWriter(lec_dis_file, lec_dis_keys)
-lec_writer.writeheader()
+section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
+section_file = open("./section_data/MATH.csv", "w", newline='')
+section_writer = csv.DictWriter(section_file, section_keys)
+section_writer.writeheader()
 
 searchSubject("math", "(MATH)", "Winter 2026", driver)
-searchClasses(driver, class_writer, lec_writer)
+searchSection(driver, class_writer, section_writer)
 
 class_file.close()
-lec_dis_file.close()
+section_file.close()
 
 sleep(1)
 driver.quit()
