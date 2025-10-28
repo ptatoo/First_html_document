@@ -27,7 +27,7 @@ def parseLocation(text: str):
         output = text
     return output[:-2]
 
-def searchSubject(subject: str, sub: str, term: str, driver, class_writer, lec_writer):
+def searchSubject(subject: str, sub: str, term: str, driver):
     #open schedule of classes
     try:
         driver.get("https://sa.ucla.edu/ro/public/soc")
@@ -63,6 +63,7 @@ def searchSubject(subject: str, sub: str, term: str, driver, class_writer, lec_w
     go_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="div_btn_go"]')
     go_button.click()
 
+def searchClasses(driver, class_writer, lec_writer):
     #find all classes
     shadow_host = driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
     shadow_root = shadow_host.shadow_root
@@ -78,12 +79,14 @@ def searchSubject(subject: str, sub: str, term: str, driver, class_writer, lec_w
             #each lecture is a row
             for row in rows:
                 #open discussion rows
+                disExists = False
                 try:
                     button = row.find_element(By.CSS_SELECTOR, '[class="transparentButton"]')
                     button.click()
+                    disExists = True
                 except:
                     pass
-                #gather DATA
+                #gather lecture data
                 lec_dis = {}
                 lec_dis["classId"] = class_id
                 lec_dis["lec_dis"] = row.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
@@ -101,6 +104,27 @@ def searchSubject(subject: str, sub: str, term: str, driver, class_writer, lec_w
                 lec_dis["units"] = row.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
                 lec_dis["instructors"] = row.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text
                 lec_writer.writerow(lec_dis)
+                if disExists:
+                    secondaryRows = row.find_elements(By.CSS_SELECTOR, '[class="row-fluid data_row secondary-row class-info class-not-checked"]')
+                    for secondaryRow in secondaryRows:
+                        lec_dis = {}
+                        lec_dis["classId"] = class_id
+                        lec_dis["lec_dis"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="sectionColumn"]').text
+                        texts = parseStatus(secondaryRow.find_element(By.CSS_SELECTOR, '[class="statusColumn"]').text)
+                        lec_dis["status"] = texts[0]
+                        lec_dis["total_spots"] = texts[1]
+                        lec_dis["enrolled_spots"] = texts[2]
+                        lec_dis["waitlist_status"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="waitlistColumn"]').text
+                        lec_dis["days"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="dayColumn hide-small beforeCollapseHide"]').get_attribute("innerText").strip()
+                        timing = secondaryRow.find_element(By.CSS_SELECTOR, '[class="timeColumn"]').text.split("\n")
+                        texts = parseTime(timing[-1])
+                        lec_dis["start_time"] = texts[0]
+                        lec_dis["end_time"] = texts[1]
+                        lec_dis["location"] = parseLocation(secondaryRow.find_element(By.CSS_SELECTOR, '[class="locationColumn hide-small"]').text)
+                        lec_dis["units"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="unitsColumn"]').text
+                        lec_dis["instructors"] = secondaryRow.find_element(By.CSS_SELECTOR, '[class="instructorColumn hide-small"]').text
+                        lec_writer.writerow(lec_dis)
+
 
         break
 
@@ -124,7 +148,11 @@ lec_dis_file = open("lec_dis.csv", "w", newline='')
 lec_writer = csv.DictWriter(lec_dis_file, lec_dis_keys)
 lec_writer.writeheader()
 
-searchSubject("math", "(MATH)", "Winter 2026", driver, class_writer, lec_writer)
+searchSubject("math", "(MATH)", "Winter 2026", driver)
+searchClasses(driver, class_writer, lec_writer)
+
+class_file.close()
+lec_dis_file.close()
 
 sleep(1)
 driver.quit()
