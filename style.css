@@ -85,6 +85,37 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+#go_button {
+    height: 30px;
+    width: 35px;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    padding: 0px;
+    font-size: 14px;
+    background-color: white;
+    border-width: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#go_button:hover {
+    border-width: 0px;
+}
+
+#go_button:active {
+    border-width: 1px;
+}
+
+#classList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10x;
+    padding: 10px;
+    margin: 10px;
+    min-height: 20px;
+    background-color: rgb(225, 255, 206);
+    box-sizing: border-box;
+}
+
 h4 {
     font-size: 15px;
     font-weight: 100;
