@@ -127,7 +127,7 @@ def searchSection(driver, lec_writer):
             # getting current page button :star:
             cpgB = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]').find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
             cpgB[i].click()
-            sleep(0.5) # Wait for page content to load
+            sleep(1) # Wait for page content to load
 
         # 2. Expand all sections on the current page
         print("Domain Expansion.")
@@ -137,7 +137,7 @@ def searchSection(driver, lec_writer):
             driver.execute_script("arguments[0].click();", expand_all_button)
 
             #waiting for stuff to load
-            sleep(1) 
+            sleep(3) 
         except Exception as e:
             print(f"expand all btn is like nonexistent bruh")
             continue
@@ -213,10 +213,12 @@ def scrapeSubject(subject: str, term, headless: bool):
     elapsed_time = end_time - start_time
     print(f"Code execution time: {elapsed_time:.4f} seconds")
 
-subjectList = open("SubjectsList.txt", "r")
-for line in subjectList:
-    line = line.strip()
-    lines = line.split("(")
-    if (len(lines) > 1):
-        line = line.split("(")[1][:-1]
-    scrapeSubject(line, "Winter 2026", False)
+# subjectList = open("SubjectsList.txt", "r")
+# for line in subjectList:
+#     line = line.strip()
+#     lines = line.split("(")
+#     if (len(lines) > 1):
+#         line = line.split("(")[1][:-1]
+#     scrapeSubject(line, "Winter 2026", False)
+
+scrapeSubject("MATH", "Winter 2026", False)
