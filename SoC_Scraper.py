@@ -1,11 +1,18 @@
+
 import csv
 import time
 import re
+from time import sleep
+
+#SELENIUM DRIVERS
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-from time import sleep
+
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+#beautiful soup
 from bs4 import BeautifulSoup
 
 
@@ -94,13 +101,22 @@ def searchSubject(subject: str, sub: str, term: str, driver):
 
     #click go button
     try:
-        sleep(0.5)
         go_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="div_btn_go"]')
         go_button.click()
     except:
         print("dude, ts broke")
         return False
     return True
+
+#
+def waitTillJqueryComplete(driver, timeout=5):
+    try:
+        wait = WebDriverWait(driver,timeout=timeout)
+        wait.until(lambda d: d.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)"))
+        print("TS worked")
+    except:
+        print("TS pmo'd the waittimng ro someting")
+        return False
 
 #searches for each sectionand writes it to csv file
 def searchSection(driver, lec_writer):
@@ -127,23 +143,25 @@ def searchSection(driver, lec_writer):
             # getting current page button :star:
             cpgB = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]').find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
             cpgB[i].click()
-            sleep(1) # Wait for page content to load
+            #wait for next page to load
+            waitTillJqueryComplete(driver)
 
+    
         # 2. Expand all sections on the current page
         print("Domain Expansion.")
         try:
             expand_all_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
             #JS CLICK!!!
             driver.execute_script("arguments[0].click();", expand_all_button)
-
-            #waiting for stuff to load
-            sleep(3) 
         except Exception as e:
             print(f"expand all btn is like nonexistent bruh")
             continue
+        
+        #wait for expansion
+        waitTillJqueryComplete(driver)
 
         #steal that HTML
-        print("HEIL HTML")
+        print("HTML yummy")
         html_content = driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
         soup = BeautifulSoup(html_content, 'lxml')
 
@@ -220,5 +238,4 @@ def scrapeSubject(subject: str, term, headless: bool):
 #     if (len(lines) > 1):
 #         line = line.split("(")[1][:-1]
 #     scrapeSubject(line, "Winter 2026", False)
-
 scrapeSubject("MATH", "Winter 2026", False)
