@@ -35,10 +35,9 @@ async function searchSubject(subject) {
     rows.forEach(row => {
         const elem = document.createElement("div");
         elem.innerText = JSON.stringify(row);
+        console.log(JSON.stringify(row))
         list.appendChild(elem);
   });
-
-
 }
 
 for (let i = 0; i < search_type.length; i ++) {
