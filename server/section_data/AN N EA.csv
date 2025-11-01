@@ -1,0 +1,64 @@
+classId,lec_dis,status,total_spots,enrolled_spots,waitlist_status,days,start_time,end_time,location,units,instructors
+ANNEA0012W,Sem 1,Open,15,0,0 of 5 Taken,TR,5,6:15,Dodd Hall 162,5.0,"Smoak, J.D."
+ANNEA0014W,Lec 1,Cancelled,0,0,No Waitlist,TR,11,12:15,No Location,5.0,No instructors
+ANNEA0014W,Dis 1A,Cancelled,0,0,No Waitlist,R,4,4:50,Mathematical Sciences,0.0,No instructors
+ANNEA0014W,Dis 1B,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,R,4,4:50,Haines Hall A82,0.0,No instructors
+ANNEA0014W,Dis 1C,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,R,5,5:50,Royce Hall 160,0.0,No instructors
+ANNEA0014W,Dis 1D,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,R,5,5:50,Royce Hall 162,0.0,No instructors
+ANNEA0014W,Dis 1E,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,F,9,9:50,Renee and David Kaplan Hall A46,0.0,No instructors
+ANNEA0014W,Dis 1F,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,F,10,10:50,Haines Hall A76,0.0,No instructors
+ANNEA0014W,Dis 1G,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,F,11,11:50,Public Affairs Building 2333,0.0,No instructors
+ANNEA0014W,Dis 1H,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,F,12,12:50,Royce Hall 162,0.0,No instructors
+ANNEA0075M,Lec 1,Open,55,0,0 of 25 Taken,Varies,,,Online - Asynchronous,5.0,"Winnerman, J.P."
+ANNEA0075M,Dis 1A,Open,11,0,0 of 5 Taken,F,9,9:50,Online,0.0,TA
+ANNEA0075M,Dis 1B,Open,11,0,0 of 5 Taken,F,10,10:50,Online,0.0,TA
+ANNEA0075M,Dis 1C,Open,11,0,0 of 5 Taken,F,11,11:50,Online,0.0,TA
+ANNEA0075M,Dis 1D,Open,11,0,0 of 5 Taken,F,9,9:50,Rolfe Hall 3135,0.0,TA
+ANNEA0075M,Dis 1E,Open,11,0,0 of 5 Taken,F,10,10:50,Rolfe Hall 3135,0.0,TA
+ANNEA0110BM,Lec 1,Open,40,0,0 of 10 Taken,TR,2,3:15,Dodd Hall 161,4.0,"Mousavi, S."
+ANNEA0123BC,Lec 1,Open,10,0,0 of 5 Taken,MW,2,3:50,Bunche Hall 3143,5.0,"Winnerman, J.P."
+ANNEA0130M,Lec 1,Open,66,0,0 of 30 Taken,MW,9:30,10:45,Royce Hall 362,5.0,"Ashby, S."
+ANNEA0130M,Dis 1A,Open,11,0,0 of 5 Taken,R,4,4:50,Bunche Hall 2156,0.0,TA
+ANNEA0130M,Dis 1B,Open,11,0,0 of 5 Taken,R,5,5:50,Bunche Hall 2156,0.0,TA
+ANNEA0130M,Dis 1C,Open,11,0,0 of 5 Taken,R,6,6:50,Bunche Hall 2156,0.0,TA
+ANNEA0130M,Dis 1D,Open,20,0,0 of 5 Taken,F,10,10:50,Public Affairs Building 1264,0.0,TA
+ANNEA0130M,Dis 1E,Open,20,0,0 of 5 Taken,F,11,11:50,Public Affairs Building 2270,0.0,TA
+ANNEA0130M,Dis 1F,Cancelled,0,0,No Waitlist,F,11,11:50,Public Affairs Building,0.0,No instructors
+ANNEA0197,Tut 1,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Varies,,,No Location,2.0-4.0 Variable,"Yates, A.D."
+ANNEA0223BC,Lec 1,Open,10,0,0 of 5 Taken,MW,2,3:50,Bunche Hall 3143,5.0,"Winnerman, J.P."
+ANNEA0240B,Sem 1,Open,10,0,No Waitlist,M,3,5:50,Renee and David Kaplan Hall 365,4.0,"Konstantopoulos, G"
+ANNEA0277C001,Lec 1,Open,15,0,No Waitlist,R,9,11:50,Renee and David Kaplan Hall 398,4.0,"Ashby, S."
+ANNEA0277C002,Lec 2,Open,15,0,No Waitlist,W,9,11:50,Renee and David Kaplan Hall 365,4.0,"Konstantopoulos, G"
+ANNEA0596,Tut 1,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Ashby, S."
+ANNEA0596,Tut 2,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bakhos, C.A."
+ANNEA0596,Tut 3,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bonesho, C.E."
+ANNEA0596,Tut 4,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Burke, A.A."
+ANNEA0596,Tut 5,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Cooney, K.M."
+ANNEA0596,Tut 6,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Fabian, L."
+ANNEA0596,Tut 7,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Konstantopoulos, G"
+ANNEA0596,Tut 8,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Schniedewind, W.M."
+ANNEA0596,Tut 9,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Shayegan, M.R."
+ANNEA0596,Tut 10,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Slyomovics, S."
+ANNEA0596,Tut 11,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Yates, A.D."
+ANNEA0597,Tut 1,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Ashby, S."
+ANNEA0597,Tut 2,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bakhos, C.A."
+ANNEA0597,Tut 3,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bonesho, C.E."
+ANNEA0597,Tut 4,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Burke, A.A."
+ANNEA0597,Tut 5,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Cooney, K.M."
+ANNEA0597,Tut 6,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Fabian, L."
+ANNEA0597,Tut 7,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Konstantopoulos, G"
+ANNEA0597,Tut 8,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Schniedewind, W.M."
+ANNEA0597,Tut 9,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Shayegan, M.R."
+ANNEA0597,Tut 10,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Slyomovics, S."
+ANNEA0597,Tut 11,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Yates, A.D."
+ANNEA0599,Tut 1,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Ashby, S."
+ANNEA0599,Tut 2,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bakhos, C.A."
+ANNEA0599,Tut 3,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bonesho, C.E."
+ANNEA0599,Tut 4,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Burke, A.A."
+ANNEA0599,Tut 5,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Cooney, K.M."
+ANNEA0599,Tut 6,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Fabian, L."
+ANNEA0599,Tut 7,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Konstantopoulos, G"
+ANNEA0599,Tut 8,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Schniedewind, W.M."
+ANNEA0599,Tut 9,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Shayegan, M.R."
+ANNEA0599,Tut 10,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Slyomovics, S."
+ANNEA0599,Tut 11,Closed by Dept Near Eastern Languages and Cultures,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Yates, A.D."
