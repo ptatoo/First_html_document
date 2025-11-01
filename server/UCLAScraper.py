@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 
 def waitTillJqueryComplete(driver, debug, timeout=15):
     try:
-        wait = Webself.driverWait(driver,timeout=timeout)
+        wait = WebDriverWait(driver,timeout=timeout)
         wait.until(lambda d: d.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)"))
     except:
         print(f"ERRRRr: {debug}")
@@ -76,7 +76,7 @@ class UCLAScraper:
     def __init__(self, term: str, headless: bool):
         self.term = term
         self.headless = headless
-        self.self.driver = None
+        self.driver = None
 
     #so it can be used with with
     def __enter__(self):
@@ -86,15 +86,17 @@ class UCLAScraper:
             chrome_options.add_argument("--headless=new")
         
         try:
-            self.self.driver = webself.driver.Chrome(options=chrome_options)
-            self.self.driver.implicitly_wait(0.5)
+            self.driver = webdriver.Chrome(options=chrome_options)
+            self.driver.implicitly_wait(0.5)
         except Exception as e:
             raise Exception(f"Failed to start Webself.driver: {e}")
+        
+        return self
     
     #so it can be used with with
-    def __exit__(self):
-        if self.self.driver:
-            self.self.driver.quit()
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.driver:
+            self.driver.quit()
 
     #gets URL for specific subject
     """ args
@@ -130,7 +132,7 @@ class UCLAScraper:
             "instructors" : row.select_one('.instructorColumn').get_text(separator=', ', strip = True)
         }
 
-    def scrapeExpandedHTML(self, lec_writer, shadow_host):
+    def scrape_expanded_HTML(self, lec_writer, shadow_host):
         #steal that HTML
         html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
         soup = BeautifulSoup(html_content, 'lxml')
@@ -159,7 +161,10 @@ class UCLAScraper:
 
 
     #searches for each section and writes it to csv file
-    def searchSection(self, lec_writer, debug):
+    def scrape_all(self, lec_writer, debug):
+
+    
+        start = time.perf_counter()
         #find all sections
         shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
         shadow_root = shadow_host.shadow_root
@@ -228,26 +233,35 @@ class UCLAScraper:
                     except AttributeError:
                         # This happens if a row is missing a column, we can safely skip it
                         continue
+        end = time.perf_counter()
+        print("TT scrape: " + f"{end-start}")
 
 
 
     #searches for subject, searches for each section, writes it to csv file
-    def scrapeSubject(self, subject: str, term):
-        print(f"scraping {subject} {term}")
+    def scrape_subject(self, subject: str):
+        print(f"scraping {subject} {self.term}")
         #open up csv file
         section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
         output_path = "./server/section_data/" + subject + ".csv"
+        startF = time.perf_counter()
         with open(output_path, "w", newline='') as section_file:
             section_writer = csv.DictWriter(section_file, section_keys)
             section_writer.writeheader()
 
             #scrape
-            url = self.get_url(subject,term)
+            url = self.get_url(subject)
             self.driver.get(url)
 
-            self.searchSection(self.driver, section_writer, subject)
+            self.scrape_all(section_writer, subject)
+
+            start = time.perf_counter()
 
             self.driver.implicitly_wait(0.5)
             section_file.close()
-            sleep(0.5)
             self.driver.quit()
+
+            end = time.perf_counter()
+            print("TT close driver and sec file: " + f"{end-start}")
+        endF = time.perf_counter()
+        print("total time: " + f"{endF-startF}")

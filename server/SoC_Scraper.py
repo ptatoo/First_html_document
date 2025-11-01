@@ -21,6 +21,8 @@ from selenium.webdriver.support import expected_conditions as EC
 #beautiful soup
 from bs4 import BeautifulSoup
 
+#UCLAScraper
+from UCLAScraper import UCLAScraper
 
 BASE_URL = "https://sa.ucla.edu/ro/public/soc"
 
@@ -231,86 +233,8 @@ if __name__ == '__main__':
     multiprocessing.set_start_method('spawn')
     
     start_time = 0
-
-    scrape_type = input()
     
-    if(scrape_type == "subjects"):
+    with UCLAScraper(term="25F", headless=False) as scraper:
+        scraper.scrape_subject("MATH")
 
-        start_time = time.perf_counter()
-        end_time = 0
-        subject_list = open("server/Subjects.txt", "r")
-
-        jobs = []
-
-        ### PRODUCTION CODE
-        # for i, line in enumerate(subject_list):
-        #     line = line.strip()
-        #     lines = line.split("(")
-        #     if (len(lines) > 1):
-        #         line = line.split("(")[len(lines) - 1][:-1]   
-        #     arg = (line,"26F",False)
-        #     jobs.append(arg)
-
-        ### DEBUG CODE
-        for i, line in enumerate(subject_list):
-            if(i<12):
-                line = line.strip()
-                lines = line.split("(")
-                if (len(lines) > 1):
-                    line = line.split("(")[len(lines) - 1][:-1]   
-                arg = (line,"25F",False)
-                jobs.append(arg)
-
-        print("args: ")
-        print(jobs)
-        print("-" * 50)
-        
-        #SETTING UP PROCESS POOL EXECUTOR
-        jobs = []
-        jobs.append(("MATH","25F",False))
-        max_workers = 1
-        
-        with ProcessPoolExecutor(max_workers=max_workers) as executor:
-            iterator = executor.map(scrape_subject_wrapper,jobs)
-            results = list(iterator)
-    elif (scrape_type == "classs"):
-        
-        start_time = time.perf_counter()
-        class_list = open("Classes.txt", "r")
-
-        jobs = []
-
-        ### PRODUCTION CODE
-
-        ### DEBUG CODE
-        for i, line in enumerate(class_list):
-            line = line.strip()
-            lines = line.split("(")
-            if (len(lines) > 1):
-                line = line.split("(")[len(lines) - 1][:-1]   
-            arg = (line,"25F",False)
-            jobs.append(arg)
-
-        print("args: ")
-        print(jobs)
-        print("-" * 50)
-        
-        #SETTING UP PROCESS POOL EXECUTOR
-        jobs = []
-        jobs.append(("MATH","25F",False))
-        max_workers = 1
-        
-        with ProcessPoolExecutor(max_workers=max_workers) as executor:
-            iterator = executor.map(scrape_subject_wrapper,jobs)
-            results = list(iterator)
     
-    end_time = time.perf_counter
-
-    print(f"time elapsed: {(end_time-start_time)}")
-    #THE PROCESS POOL EXECUTOR
-    # with ProcessPoolExecutor(max_workers=max_workers) as executor:
-    #     print(1)
-    #     iterator = executor.map(scrape_subject_wrapper,jobs)
-    #     results = list(iterator)
-    #2 in 10
-    #15 in 24
