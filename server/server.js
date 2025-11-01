@@ -1,8 +1,8 @@
 const fs = require('fs');
 const express = require('express');
-const csv = require('../Local Trash/node_modules/csv-parser');
+const csv = require('csv-parser');
 const app = express();
- 
+
 app.get('/data', (req, res) => {
     const results = [];
     fs.createReadStream('./section_data/MATH.csv')
