@@ -6,11 +6,7 @@ from time import sleep
 
 import queue
 
-#threads
-from threading import Thread
-from concurrent.futures import ThreadPoolExecutor
-
-#MULTIPRROCESSING
+#Processes
 from concurrent.futures import ProcessPoolExecutor
 import multiprocessing
 
@@ -25,6 +21,8 @@ from selenium.webdriver.support import expected_conditions as EC
 #beautiful soup
 from bs4 import BeautifulSoup
 
+#UCLAScraper
+from UCLAScraper import UCLAScraper
 
 BASE_URL = "https://sa.ucla.edu/ro/public/soc"
 
@@ -79,10 +77,6 @@ def parseInstructor(text: str):
     return output[:-2]
 
 def scrape_subject_wrapper(job_args):
-    """
-    This function is picklable. It takes a tuple of arguments
-    and unpacks them when calling the actual worker function.
-    """
     return scrapeSubject(*job_args)
 
 #searches for a particular subject
@@ -190,38 +184,6 @@ def searchSection(driver, lec_writer, debug):
         
         #wait for expansion
         waitTillJqueryComplete(driver, debug)
-
-        scrapeExpandedHTML(driver,lec_writer,shadow_host)
-
-    # loop through each page
-    for i in range(pgs):
-        # get shadow stuff
-        shadow_host = driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
-        shadow_root = shadow_host.shadow_root
-
-        try:
-            if pgs > 1:
-                # getting current page button :star:
-                cpgB = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]').find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
-                cpgB[i].click()
-                #wait for next page to load
-                waitTillJqueryComplete(driver, debug)
-        except Exception as e:
-            print(debug)
-            break
-
-    
-        # 2. Expand all sections on the current page
-        try:
-            expand_all_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
-            #JS CLICK!!!
-            driver.execute_script("arguments[0].click();", expand_all_button)
-        except Exception as e:
-            print(debug)
-            continue
-        
-        #wait for expansion
-        waitTillJqueryComplete(driver, debug)
         scrapeExpandedHTML(driver,lec_writer,shadow_host)
 
 
@@ -241,19 +203,12 @@ def scrapeSubject(subject: str, term, headless: bool):
         raise Exception("Failed to run webdriver.")
     driver.implicitly_wait(0.5)
 
-
-    
-    start = time.perf_counter()
     #open up csv file
     section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
-    section_file = open("./section_data/" + subject + ".csv", "w", newline='')
+    section_file = open("./server/section_data/" + subject + ".csv", "w", newline='')
     section_writer = csv.DictWriter(section_file, section_keys)
     section_writer.writeheader()
 
-    end = time.perf_counter()
-    elapsed_time = end - start
-
-    print(f"CSV open: {elapsed_time:.4f} seconds")
     #Search 
     try:
         driver.get(get_url(subject, term))
@@ -276,40 +231,10 @@ def scrape_subject_wrapper(job_args):
 if __name__ == '__main__':
 
     multiprocessing.set_start_method('spawn')
-    start_time = time.perf_counter()
-    subject_list = open("ScrapeSubjects.txt", "r")
-
-    jobs = []
-
-    for i, line in enumerate(subject_list):
-        if(i<12):
-            line = line.strip()
-            lines = line.split("(")
-            if (len(lines) > 1):
-                line = line.split("(")[len(lines) - 1][:-1]   
-            arg = (line,"25F",False)
-            jobs.append(arg)
-
-    print("args: ")
-    print(jobs)
-    print("-" * 50)
     
-    #SETTING UP PROCESS POOL EXECUTOR
-    jobs = []
-    jobs.append(("MATH","25F",False))
-    max_workers = 1
-    scrapeSubject("MATH","25F",False)
+    start_time = 0
     
+    with UCLAScraper(term="25F", headless=False) as scraper:
+        scraper.scrape_subject("MATH")
 
-    #THE PROCESS POOL EXECUTOR
-    # with ProcessPoolExecutor(max_workers=max_workers) as executor:
-    #     print(1)
-    #     iterator = executor.map(scrape_subject_wrapper,jobs)
-    #     results = list(iterator)
-
-    # end_time = time.perf_counter()
-    # elapsed_time = end_time - start_time
-    # print(f"Code execution time: {elapsed_time:.4f} seconds")
-
-    #2 in 10
-    #15 in 24
+    

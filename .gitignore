@@ -1,4 +1,4 @@
-section_data/*
+
 
 # Logs
 logs
@@ -24,3 +24,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+**/__pycache__
+
+# folders
+**/section_data/*

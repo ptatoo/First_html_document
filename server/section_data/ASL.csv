@@ -1,9 +1,0 @@
-classId,lec_dis,status,total_spots,enrolled_spots,waitlist_status,days,start_time,end_time,location,units,instructors
-ASL0001,Lec 1,Open,30,0,0 of 5 Taken,"MF
-TWR",1,1:50,"Online, Public Affairs Building 2250",5.0,"Marfino, J."
-ASL0002,Lec 1,Open,30,0,0 of 5 Taken,MTWRF,9,9:50,Public Affairs Building 2250,5.0,"Lewis, B."
-ASL0003,Lec 1,Open,30,0,0 of 5 Taken,"TWR
-MF",4,4:50,"Public Affairs Building 2250, Online",5.0,"Marfino, J."
-ASL0005,Lec 1,Open,30,0,0 of 5 Taken,"TR
-F",2,2:50,"Public Affairs Building 2250, Online",5.0,"Marfino, J."
-ASL0130,Lec 1,Open,60,0,0 of 5 Taken,TR,11,12:15,Public Affairs Building 2250,4.0,"Lewis, B."
