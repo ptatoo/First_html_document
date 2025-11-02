@@ -1,14 +1,31 @@
 const fs = require('fs');
-const express = require('express');
 const csv = require('csv-parser');
-const app = express();
+const express = require('express');
+const cors = require('cors');
 
-app.get('/data', (req, res) => {
-    const results = [];
-    fs.createReadStream('./section_data/MATH.csv')
-        .pipe(csv())
-        .on('data', (row) => results.push(row))
-        .on('end', () => res.json(results));
+const csvFilePath = './server/section_data/MATH.csv';
+const app = express();
+const PORT = 3000;
+
+const records = []
+
+fs.createReadStream(csvFilePath)
+    .pipe(csv())
+    .on("data", data => records.push(data))
+    .on("end", () => {
+        console.log("CSV file successfully processed");
+    });
+
+app.use(
+    cors({
+        origin: ['http://localhost:5173']
+    })
+);
+
+app.get("/", (req, res) => {
+    res.json(records);
 })
 
-app.listen(5500, () => console.log('Server running on port 5500'))
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

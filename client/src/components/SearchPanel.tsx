@@ -1,11 +1,20 @@
 import SearchType from "./SearchType";
 import TermType from "./TermType";
+import { useState } from "react";
 
-const SearchPanel = () => {
+interface Props {
+  onGoSearch: (input: string, type: string) => void;
+}
+
+const SearchPanel = ({ onGoSearch }: Props) => {
+  const retrieveGoSearch = (input: string, type: string) => {
+    onGoSearch(input, type);
+  };
+
   return (
     <>
       <TermType />
-      <SearchType />
+      <SearchType onSelectItem={retrieveGoSearch} />
     </>
   );
 };
