@@ -1,10 +1,10 @@
 
 import csv
 import time
+import random
 
 #Processes
 from concurrent.futures import ProcessPoolExecutor
-import concurrent.futures
 import multiprocessing
 from multiprocessing.pool import Pool
 #UCLAScraper
@@ -43,6 +43,8 @@ if __name__ == '__main__':
             subjectID_list.append(line)
     
     num_workers = 4
+    
+    random.shuffle(subjectID_list)
 
     # splits the subject list into even sized batches
     batches = [subjectID_list[i::num_workers] for i in range(num_workers)]
@@ -52,7 +54,7 @@ if __name__ == '__main__':
 
     print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
     print("-" * 50)
-    print(job_args[0])
+    print(job_args)
     # PROCESS POOL EXECUTOR
     with ProcessPoolExecutor(max_workers=num_workers) as executor:
         executor.map(wrapper_worker, job_args)
