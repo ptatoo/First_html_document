@@ -1,9 +1,11 @@
+//imports
+const path = require('path');
 const fs = require('fs');
 const csv = require('csv-parser');
 const express = require('express');
 const cors = require('cors');
 
-const csvFilePath = './server/section_data/MATH.csv';
+const csvFilePath = path.join(__dirname, '/section_data/MATH.csv');
 const app = express();
 const PORT = 3000;
 
