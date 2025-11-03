@@ -59,8 +59,9 @@ if __name__ == '__main__':
     print("-" * 50)
 
     # PROCESS POOL EXECUTOR
-    with ProcessPoolExecutor(max_workers=num_workers) as executor:
-        executor.map(worker_scrape_batch, job_args)
+    with UCLAScraper("25f", True) as scraper:
+        scraper.scrape_subject("MATH")
+
 
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
