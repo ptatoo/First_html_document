@@ -1,7 +1,11 @@
 import { useState } from "react";
 import GoButton from "./GoButton";
 
-const SearchType = () => {
+interface Props {
+  onSelectItem: (item1: string, item2: string) => void;
+}
+
+const SearchType = ({ onSelectItem: onGoSearch }: Props) => {
   const search_type = [
     "Subject Area",
     "Class Units",
@@ -22,9 +26,8 @@ const SearchType = () => {
   const [selectedType, setSelectedIndex] = useState(search_type[0]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  function handleSearch() {
-    console.log("Searching for: ", searchTerm);
-    console.log("Search Type: ", selectedType);
+  function goSearch() {
+    onGoSearch(searchTerm, selectedType);
   }
 
   return (
@@ -55,7 +58,7 @@ const SearchType = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </label>
-      <button onClick={handleSearch}>Go</button>
+      <button onClick={goSearch}>Go</button>
     </>
   );
 };
