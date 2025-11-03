@@ -2,13 +2,6 @@
 import csv
 import time
 import re
-from time import sleep
-
-import queue
-
-#threads
-from threading import Thread
-from concurrent.futures import ThreadPoolExecutor
 
 #SELENIUM DRIVERS
 from selenium.webdriver.common.by import By
@@ -62,13 +55,6 @@ def parseLocation(text: str):
     else:
         output = text
         return output
-    return output[:-2]
-
-def parseInstructor(text: str):
-    texts = text.split("\n")
-    output = ""
-    for t in texts:
-        output += t + "; "
     return output[:-2]
 
 class UCLAScraper:
@@ -131,33 +117,6 @@ class UCLAScraper:
             "units" : row.select_one('.unitsColumn').get_text(strip=True),
             "instructors" : row.select_one('.instructorColumn').get_text(separator=', ', strip = True)
         }
-
-    def scrape_expanded_HTML(self, lec_writer, shadow_host):
-        #steal that HTML
-        html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
-        soup = BeautifulSoup(html_content, 'lxml')
-
-        #parsing
-        class_containers = soup.select('.row-fluid.class-title')
-        for cls in class_containers:
-            class_id = cls.get('id')
-            
-            #gets lec / disc container
-            children_div = soup.find('div', id=f"{class_id}-children")
-            if not children_div:
-                continue
-
-            # find all rows
-            all_rows = children_div.select('.row-fluid.data_row')
-            
-            #parser
-            for row in all_rows:    
-                try:
-                    section_list = {"classId":class_id, **self.get_row_content(row)}
-                    lec_writer.writerow(section_list)
-                except AttributeError:
-                    # This happens if a row is missing a column, we can safely skip it
-                    continue
 
     def scrape_HTML(self, lec_writer):
         # get shadow stuff

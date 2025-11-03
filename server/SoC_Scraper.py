@@ -35,12 +35,11 @@ if __name__ == '__main__':
     start_time = time.perf_counter()
 
     for i, line in enumerate(subject_csv):
-        if(i<12):
-            line = line.strip()
-            lines = line.split("(")
-            if (len(lines) > 1):
-                line = line.split("(")[len(lines) - 1][:-1]   
-            subjectID_list.append(line)
+        line = line.strip()
+        lines = line.split("(")
+        if (len(lines) > 1):
+            line = line.split("(")[len(lines) - 1][:-1]   
+        subjectID_list.append(line)
     
     num_workers = 4
     
