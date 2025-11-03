@@ -161,11 +161,15 @@ class UCLAScraper:
 
 
     #searches for each section and writes it to csv file
-    def scrape_all(self, lec_writer, debug):
 
-    
+    def scrape_all(self, lec_writer, subject):    
+        
         start = time.perf_counter()
-        #find all sections
+
+        url = self.get_url(subject)
+        self.driver.get(url)
+
+        #gets shadow stuff
         shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
         shadow_root = shadow_host.shadow_root
 
@@ -177,35 +181,43 @@ class UCLAScraper:
         except:
             pgs = 1 # if UNO pages
 
-        #1. Loop through all pages
-        for i in range(pgs):
-            # get shadow stuff
+
+        handles = self.driver.window_handles
+
+        #opens multiple tabs
+        for i in range(pgs-1):
+            self.driver.execute_script(f"window.open('{url}');")
+            new_handles = set(self.driver.window_handles)
+            new_window_handle = (new_handles - set(handles)).pop() # Get the single new item
+            handles.append(new_window_handle)
+
+        
+        self.driver.execute_script(f"window.open('about:blank');")
+
+        #cycle thrpugh all tabs, each tab representing a page, adn expands
+        for handle in handles:
+            self.driver.switch_to.window(handle)
             shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
             shadow_root = shadow_host.shadow_root
 
-            try:
-                if pgs > 1:
-                    # getting current page button :star:
-                    cpgB = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]').find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
-                    cpgB[i].click()
-                    #wait for next page to load
-                    waitTillJqueryComplete(self.driver, debug)
-            except Exception as e:
-                print(debug)
-                break
-
-        
-            # 2. Expand all sections on the current page
             try:
                 expand_all_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
                 #JS CLICK!!!
                 self.driver.execute_script("arguments[0].click();", expand_all_button)
             except Exception as e:
-                print(debug)
+                print(subject)
                 continue
+
+        #1. Loop through all pages
+        for handle in handles:
+            self.driver.switch_to.window(handle)
             
+            # get shadow stuff
+            shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
+            shadow_root = shadow_host.shadow_root
+
             #wait for expansion
-            waitTillJqueryComplete(self.driver, debug)
+            waitTillJqueryComplete(self.driver, subject)
 
             #3. steal HTML
             html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
@@ -233,10 +245,12 @@ class UCLAScraper:
                     except AttributeError:
                         # This happens if a row is missing a column, we can safely skip it
                         continue
+            self.driver.close()
+        
+        self.driver.switch_to.window(self.driver.window_handles[0])
+
         end = time.perf_counter()
-        print("TT scrape: " + f"{end-start}")
-
-
+        print("TT scrape: " + f"{end-start}")   
 
     #searches for subject, searches for each section, writes it to csv file
     def scrape_subject(self, subject: str):
@@ -250,16 +264,12 @@ class UCLAScraper:
             section_writer.writeheader()
 
             #scrape
-            url = self.get_url(subject)
-            self.driver.get(url)
-
             self.scrape_all(section_writer, subject)
 
             start = time.perf_counter()
 
             self.driver.implicitly_wait(0.5)
             section_file.close()
-            self.driver.quit()
 
             end = time.perf_counter()
             print("TT close driver and sec file: " + f"{end-start}")
