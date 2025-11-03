@@ -1,5 +1,3 @@
-
-
 # Logs
 logs
 *.log
@@ -27,5 +25,4 @@ dist-ssr
 **/__pycache__
 
 # folders
-**/section_data/*
 **/really beta stuff.py
