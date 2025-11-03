@@ -195,8 +195,8 @@ class UCLAScraper:
         self.driver.execute_script(f"window.open('about:blank');")
 
         #cycle thrpugh all tabs, each tab representing a page, adn expands
-        for handle in handles:
-            self.driver.switch_to.window(handle)
+        for i in range(pgs):
+            self.driver.switch_to.window(handles[i])
             shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
             shadow_root = shadow_host.shadow_root
 

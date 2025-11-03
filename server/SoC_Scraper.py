@@ -47,10 +47,8 @@ if __name__ == '__main__':
     num_workers = 4
 
     # splits the subject list into even sized batches
-
-
-    batches = [subjectID_list[i::num_workers] for i in range(num_workers)]
-
+    print(subjectID_list)
+    batches = []
     # prep args
     # Create a list of tuples. Each tuple is the set of arguments for one worker.
     job_args = [(batch, "25F", False) for batch in batches]
