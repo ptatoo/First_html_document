@@ -21,7 +21,7 @@ fs.createReadStream(csvFilePath)
 app.use(
     cors({
         origin: ['http://localhost:5173',
-            'https://ptatoo.github.io/First_Nodejs_Document.com']
+            'https://ptatoo.github.io/']
     })
 );
 
