@@ -19,10 +19,7 @@ fs.createReadStream(csvFilePath)
     });
 
 app.use(
-    cors({
-        origin: ['http://localhost:5173',
-            'https://ptatoo.github.io/']
-    })
+    cors()
 );
 
 app.get("/", (req, res) => {
