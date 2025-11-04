@@ -2,13 +2,6 @@
 import csv
 import time
 import re
-from time import sleep
-
-import queue
-
-#threads
-from threading import Thread
-from concurrent.futures import ThreadPoolExecutor
 
 #SELENIUM DRIVERS
 from selenium.webdriver.common.by import By
@@ -22,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
 
-def waitTillJqueryComplete(driver, debug, timeout=15):
+def waitTillJqueryComplete(driver, debug = "debug", timeout=15):
     try:
         wait = WebDriverWait(driver,timeout=timeout)
         wait.until(lambda d: d.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)"))
@@ -64,13 +57,6 @@ def parseLocation(text: str):
         return output
     return output[:-2]
 
-def parseInstructor(text: str):
-    texts = text.split("\n")
-    output = ""
-    for t in texts:
-        output += t + "; "
-    return output[:-2]
-
 class UCLAScraper:
     BASE_URL = "https://sa.ucla.edu/ro/public/soc"
     def __init__(self, term: str, headless: bool):
@@ -81,7 +67,7 @@ class UCLAScraper:
     #so it can be used with with
     def __enter__(self):
         chrome_options = Options()
-        chrome_options.page_load_strategy = 'normal'
+        chrome_options.page_load_strategy = 'eager'
         if self.headless:
             chrome_options.add_argument("--headless=new")
         
@@ -132,92 +118,13 @@ class UCLAScraper:
             "instructors" : row.select_one('.instructorColumn').get_text(separator=', ', strip = True)
         }
 
-    def scrape_expanded_HTML(self, lec_writer, shadow_host):
-        #steal that HTML
-        html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
-        soup = BeautifulSoup(html_content, 'lxml')
-
-        #parsing
-        class_containers = soup.select('.row-fluid.class-title')
-        for cls in class_containers:
-            class_id = cls.get('id')
-            
-            #gets lec / disc container
-            children_div = soup.find('div', id=f"{class_id}-children")
-            if not children_div:
-                continue
-
-            # find all rows
-            all_rows = children_div.select('.row-fluid.data_row')
-            
-            #parser
-            for row in all_rows:    
-                try:
-                    section_list = {"classId":class_id, **self.get_row_content(row)}
-                    lec_writer.writerow(section_list)
-                except AttributeError:
-                    # This happens if a row is missing a column, we can safely skip it
-                    continue
-
-
-    #searches for each section and writes it to csv file
-
-    def scrape_all(self, lec_writer, subject):    
-        
-        start = time.perf_counter()
-
-        url = self.get_url(subject)
-        self.driver.get(url)
-
-        #gets shadow stuff
-        shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
-        shadow_root = shadow_host.shadow_root
-
-        #find number of pages
-        try:
-            pg = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]')
-            pgB = pg.find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
-            pgs = len(pgB)
-        except:
-            pgs = 1 # if UNO pages
-
-
-        handles = self.driver.window_handles
-
-        #opens multiple tabs
-        for i in range(pgs-1):
-            self.driver.execute_script(f"window.open('{url}');")
-            new_handles = set(self.driver.window_handles)
-            new_window_handle = (new_handles - set(handles)).pop() # Get the single new item
-            handles.append(new_window_handle)
-
-        
-        self.driver.execute_script(f"window.open('about:blank');")
-
-        #cycle thrpugh all tabs, each tab representing a page, adn expands
-        for handle in handles:
-            self.driver.switch_to.window(handle)
-            shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
-            shadow_root = shadow_host.shadow_root
-
-            try:
-                expand_all_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
-                #JS CLICK!!!
-                self.driver.execute_script("arguments[0].click();", expand_all_button)
-            except Exception as e:
-                print(subject)
-                continue
-
-        #1. Loop through all pages
-        for handle in handles:
-            self.driver.switch_to.window(handle)
-            
-            # get shadow stuff
+    def scrape_HTML(self, lec_writer):
+        # get shadow stuff
             shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
             shadow_root = shadow_host.shadow_root
 
             #wait for expansion
-            waitTillJqueryComplete(self.driver, subject)
+            waitTillJqueryComplete(self.driver)
 
             #3. steal HTML
             html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
@@ -245,7 +152,110 @@ class UCLAScraper:
                     except AttributeError:
                         # This happens if a row is missing a column, we can safely skip it
                         continue
-            self.driver.close()
+    
+    def click_on_page(self, pg):
+        shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
+        shadow_root = shadow_host.shadow_root
+
+        cpgB = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]').find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
+        cpgB[pg].click()
+
+    def expand_page(self):
+        try:
+            shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
+            shadow_root = shadow_host.shadow_root
+            expand_all_button = shadow_root.find_element(By.CSS_SELECTOR, '[id="expandAll"]')
+            #JS CLICK!!!
+            self.driver.execute_script("arguments[0].click();", expand_all_button)
+        except Exception as e:
+            print(e)
+
+    #searches for each section and writes it to csv file
+    def scrape_all(self, lec_writer, subject):    
+        
+        start = time.perf_counter()
+
+        url = self.get_url(subject)
+        self.driver.get(url)
+
+        #gets shadow stuff
+        
+        shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
+        shadow_root = shadow_host.shadow_root
+
+        #find number of pages
+        try:
+            pg = shadow_root.find_element(By.CSS_SELECTOR, '[class="jPag-pages"]')
+            pgB = pg.find_elements(By.CSS_SELECTOR, '[style="width: 32px;"]')
+            pgs = len(pgB)
+        except:
+            pgs = 1 # if UNO pages
+
+        handles = self.driver.window_handles
+
+        #opens x number of tabs corresponding to pages and stores their window handles in a list (in order to how their opeed so that the one that has the most time  too load is accessed first)
+        for i in range(pgs-1):
+            self.driver.execute_script(f"window.open('{url}');")
+            new_handles = set(self.driver.window_handles)
+            new_window_handle = (new_handles - set(handles)).pop() # Get the single new handle
+            handles.append(new_window_handle)
+
+        #opens 1 additional tab so that driver doesn't quit when all tabs close
+        self.driver.execute_script(f"window.open('about:blank');")
+        
+        #prepping stupid ass logic
+        unloaded_tabs = handles
+        unpaged_tabs = []
+        paged_tabs = []
+        expanded_tabs = []
+        
+        page = 0
+
+        #stupid ass logic
+
+        while unloaded_tabs or unpaged_tabs or paged_tabs or expanded_tabs:
+            
+            #TS in weird ass order for optimization
+
+            #TS not break in order bc it should be prioritized as it done'st bottle neck on loading
+            for handle in unpaged_tabs:
+                self.driver.switch_to.window(handle)
+
+                self.click_on_page(page)
+                page+=1
+
+                paged_tabs.append(handle)
+                unpaged_tabs.remove(handle)
+
+            #ts bottlenecks in loading if its tnot fully loaded, but less imprtant bottle neck compared to the o ther two, but still breaks cuz prio first one
+            for handle in paged_tabs:
+                self.driver.switch_to.window(handle)
+            
+                self.expand_page()
+
+                expanded_tabs.append(handle)
+                paged_tabs.remove(handle)
+                break
+            
+            #ts bottle necks second most bc loading in expanded data takes time, breaks bc of it too
+            for handle in expanded_tabs: #
+                self.driver.switch_to.window(handle)
+
+                waitTillJqueryComplete(self.driver)
+                self.scrape_HTML(lec_writer)
+                self.driver.close()
+
+                expanded_tabs.remove(handle)
+                break
+            
+            #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
+            for handle in unloaded_tabs:
+                self.driver.switch_to.window(handle)
+
+                if(self.driver.execute_script("return document.readyState") == "complete"):
+                    unpaged_tabs.append(handle)
+                    unloaded_tabs.remove(handle)
+                break
         
         self.driver.switch_to.window(self.driver.window_handles[0])
 
