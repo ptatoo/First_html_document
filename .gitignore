@@ -28,3 +28,4 @@ dist-ssr
 **/section_data/*
 !**/section_data/MATH.csv
 **/really beta stuff.py
+.env
