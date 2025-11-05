@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, jsonify, request
 from SoC_Scraper import SoC_Scraper
 
 app = Flask(__name__)
@@ -11,6 +11,17 @@ def run_task():
 @app.route("/")
 def hello_world():
     return "Hello, World!"
+
+@app.route("/get", methods = ['GET'])
+def get_data():
+    if(request.method == 'GET'):
+        filePath = request.args['filePath']
+        try:
+            return open(f"server/Section_Data/{filePath}", "r").read()
+        except:
+            return jsonify("OOPSIE")
+    
+    return None
 
 if __name__ == '__main__':
     app.run(debug=True)

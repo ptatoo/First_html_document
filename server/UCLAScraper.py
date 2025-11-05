@@ -244,7 +244,6 @@ class UCLAScraper:
                         self.expand_page()
                         expanded_tabs.append(handle)
                         paged_tabs.remove(handle)
-                    break
                 
                 #ts bottle necks second most bc loading in expanded data takes time, breaks bc of it too
                 for handle in expanded_tabs: 
