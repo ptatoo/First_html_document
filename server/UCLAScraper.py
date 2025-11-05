@@ -14,14 +14,10 @@ from selenium.webdriver.support import expected_conditions as EC
 #beautiful soup
 from bs4 import BeautifulSoup
 
+#you ALSO NEED LXML DUUUUDE
 
-def waitTillJqueryComplete(driver, debug = "debug", timeout=15):
-    try:
-        wait = WebDriverWait(driver,timeout=timeout)
-        wait.until(lambda d: d.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)"))
-    except:
-        print(f"ERRRRr: {debug}")
-        return False
+
+
 
 def parseStatus(text: str):
     texts = text.split("\n",1)
@@ -84,6 +80,21 @@ class UCLAScraper:
         if self.driver:
             self.driver.quit()
 
+
+    def waitTillJqueryComplete(self, debug = "debug", timeout=15):
+        try:
+            wait = WebDriverWait(self.driver,timeout=timeout)
+            wait.until(lambda d: d.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)"))
+        except:
+            print(f"ERRRRr: {debug}")
+            return False
+
+    def isJqueryComplete(self, timeout=15):
+        try:
+            return self.driver.execute_script("return (typeof jQuery !== 'undefined') && (jQuery.active === 0)")
+        except:
+            return False
+
     #gets URL for specific subject
     """ args
 
@@ -124,7 +135,7 @@ class UCLAScraper:
             shadow_root = shadow_host.shadow_root
 
             #wait for expansion
-            waitTillJqueryComplete(self.driver)
+            self.waitTillJqueryComplete()
 
             #3. steal HTML
             html_content = self.driver.execute_script("return arguments[0].shadowRoot.innerHTML;", shadow_host) 
@@ -212,50 +223,49 @@ class UCLAScraper:
         page = 0
 
         #stupid ass logic
-
         while unloaded_tabs or unpaged_tabs or paged_tabs or expanded_tabs:
-            
-            #TS in weird ass order for optimization
+            try:
+                #TS in weird ass order for optimization
+                
+                #TS not break in order bc it should be prioritized as it done'st bottle neck on loading
+                for handle in unpaged_tabs:
+                    self.driver.switch_to.window(handle)
 
-            #TS not break in order bc it should be prioritized as it done'st bottle neck on loading
-            for handle in unpaged_tabs:
-                self.driver.switch_to.window(handle)
+                    self.click_on_page(page)
+                    page+=1
 
-                self.click_on_page(page)
-                page+=1
+                    paged_tabs.append(handle)
+                    unpaged_tabs.remove(handle)
+                
+                #ts bottlenecks in loading if its tnot fully loaded, but less imprtant bottle neck compared to the o ther two, but still breaks cuz prio first one
+                for handle in paged_tabs:
+                    self.driver.switch_to.window(handle)
+                    if(self.isJqueryComplete()):
+                        self.expand_page()
+                        expanded_tabs.append(handle)
+                        paged_tabs.remove(handle)
+                    break
+                
+                #ts bottle necks second most bc loading in expanded data takes time, breaks bc of it too
+                for handle in expanded_tabs: 
+                    self.driver.switch_to.window(handle)
+                    if(self.isJqueryComplete()):
+                        self.scrape_HTML(lec_writer)
+                        self.driver.close()
+                        expanded_tabs.remove(handle)
+                    else:
+                        raise Exception
+                
+                #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
+                for handle in unloaded_tabs:
+                    self.driver.switch_to.window(handle)
 
-                paged_tabs.append(handle)
-                unpaged_tabs.remove(handle)
-
-            #ts bottlenecks in loading if its tnot fully loaded, but less imprtant bottle neck compared to the o ther two, but still breaks cuz prio first one
-            for handle in paged_tabs:
-                self.driver.switch_to.window(handle)
-            
-                self.expand_page()
-
-                expanded_tabs.append(handle)
-                paged_tabs.remove(handle)
-                break
-            
-            #ts bottle necks second most bc loading in expanded data takes time, breaks bc of it too
-            for handle in expanded_tabs: #
-                self.driver.switch_to.window(handle)
-
-                waitTillJqueryComplete(self.driver)
-                self.scrape_HTML(lec_writer)
-                self.driver.close()
-
-                expanded_tabs.remove(handle)
-                break
-            
-            #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
-            for handle in unloaded_tabs:
-                self.driver.switch_to.window(handle)
-
-                if(self.driver.execute_script("return document.readyState") == "complete"):
-                    unpaged_tabs.append(handle)
-                    unloaded_tabs.remove(handle)
-                break
+                    if(self.driver.execute_script("return document.readyState") == "complete"):
+                        unpaged_tabs.append(handle)
+                        unloaded_tabs.remove(handle)
+                
+            except:    
+                pass
         
         self.driver.switch_to.window(self.driver.window_handles[0])
 

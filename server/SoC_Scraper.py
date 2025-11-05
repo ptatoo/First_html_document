@@ -20,8 +20,6 @@ def wrapper_worker(args):
     return worker_scrape_batch(*args)
 
 def SoC_Scraper():
-
-    multiprocessing.set_start_method('spawn')
     
     #opens csv file
     subject_csv = open("server/Subjects.txt", "r")
@@ -48,7 +46,8 @@ def SoC_Scraper():
     batches = [subjectID_list[i::num_workers] for i in range(num_workers)]
     
     #creates job args from the batches
-    job_args = [(batch, "25F", True) for batch in batches]
+    job_args = [(batch, "25F", False) for batch in batches]
+    job_args = [(batches[0], "25F", False)]
 
     print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
     print("-" * 50)
@@ -60,3 +59,5 @@ def SoC_Scraper():
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
     sys.stdout.flush()
+if __name__ == '__main__':
+    SoC_Scraper()
