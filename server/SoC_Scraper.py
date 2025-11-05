@@ -1,6 +1,6 @@
-import csv
 import time
 import random
+import sys
 
 #Processes
 from concurrent.futures import ProcessPoolExecutor
@@ -19,7 +19,7 @@ def worker_scrape_batch(subjectID_list: list, term: str, headless: bool):
 def wrapper_worker(args):
     return worker_scrape_batch(*args)
 
-if __name__ == '__main__':
+def SoC_Scraper():
 
     multiprocessing.set_start_method('spawn')
     
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     batches = [subjectID_list[i::num_workers] for i in range(num_workers)]
     
     #creates job args from the batches
-    job_args = [(batch, "25F", False) for batch in batches]
+    job_args = [(batch, "25F", True) for batch in batches]
 
     print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
     print("-" * 50)
@@ -59,6 +59,4 @@ if __name__ == '__main__':
 
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
-    
-
-    
+    sys.stdout.flush()
