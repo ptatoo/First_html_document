@@ -3,7 +3,7 @@ from SoC_Scraper import SoC_Scraper
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/run_task')
 def run_task():
     output = SoC_Scraper()
     return {"message": output}

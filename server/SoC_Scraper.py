@@ -59,5 +59,3 @@ def SoC_Scraper():
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
     sys.stdout.flush()
-if __name__ == '__main__':
-    SoC_Scraper()

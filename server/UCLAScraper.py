@@ -59,6 +59,7 @@ class UCLAScraper:
         self.term = term
         self.headless = headless
         self.driver = None
+        self.lec_writer = None
 
     #so it can be used with with
     def __enter__(self):
@@ -129,10 +130,9 @@ class UCLAScraper:
             "instructors" : row.select_one('.instructorColumn').get_text(separator=', ', strip = True)
         }
 
-    def scrape_HTML(self, lec_writer):
+    def scrape_HTML(self):
         # get shadow stuff
             shadow_host = self.driver.find_element(By.XPATH, '//*[@id="block-ucla-campus-mainpagecontent"]/div[2]/div/div/div/div/ucla-sa-soc-app')
-            shadow_root = shadow_host.shadow_root
 
             #wait for expansion
             self.waitTillJqueryComplete()
@@ -159,7 +159,7 @@ class UCLAScraper:
                 for row in all_rows:    
                     try:
                         section_list = {"classId":class_id, **self.get_row_content(row)}
-                        lec_writer.writerow(section_list)
+                        self.lec_writer.writerow(section_list)
                     except AttributeError:
                         # This happens if a row is missing a column, we can safely skip it
                         continue
@@ -182,7 +182,7 @@ class UCLAScraper:
             print(e)
 
     #searches for each section and writes it to csv file
-    def scrape_all(self, lec_writer, subject):    
+    def scrape_all(self, subject):    
         
         start = time.perf_counter()
 
@@ -250,19 +250,20 @@ class UCLAScraper:
                 for handle in expanded_tabs: 
                     self.driver.switch_to.window(handle)
                     if(self.isJqueryComplete()):
-                        self.scrape_HTML(lec_writer)
+                        self.scrape_HTML()
                         self.driver.close()
                         expanded_tabs.remove(handle)
                     else:
-                        raise Exception
+                        break
                 
                 #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
                 for handle in unloaded_tabs:
                     self.driver.switch_to.window(handle)
-
-                    if(self.driver.execute_script("return document.readyState") == "complete"):
-                        unpaged_tabs.append(handle)
-                        unloaded_tabs.remove(handle)
+                    if(not unpaged_tabs or not paged_tabs):
+                        if(self.driver.execute_script("return document.readyState") == "complete"):
+                            unpaged_tabs.append(handle)
+                            unloaded_tabs.remove(handle)
+                        break
                 
             except:    
                 pass
@@ -280,11 +281,11 @@ class UCLAScraper:
         output_path = "./server/section_data/" + subject + ".csv"
         startF = time.perf_counter()
         with open(output_path, "w", newline='') as section_file:
-            section_writer = csv.DictWriter(section_file, section_keys)
-            section_writer.writeheader()
+            self.lec_writer = csv.DictWriter(section_file, section_keys)
+            self.lec_writer.writeheader()
 
             #scrape
-            self.scrape_all(section_writer, subject)
+            self.scrape_all(subject)
 
             start = time.perf_counter()
 
