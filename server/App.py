@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from SoC_Scraper import SoC_Scraper
+import os
 
 app = Flask(__name__)
 
@@ -24,4 +25,5 @@ def get_data():
     return None
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8023)
+    port = int(os.environ.get("PORT", 4000))  # 👈 same idea as process.env.PORT || 4000
+    app.run(host="0.0.0.0", port=port)
