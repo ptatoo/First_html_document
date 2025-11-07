@@ -20,7 +20,7 @@ def get_data():
         try:
             return open(f"server/Section_Data/{filePath}", "r").read()
         except:
-            return jsonify("OOPSIE")
+            return jsonify("Cannot find file. " + f"server/Section_Data/{filePath}")
     
     return None
 
