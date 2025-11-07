@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from SoC_Scraper import SoC_Scraper
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/update')
 def run_task():
