@@ -20,11 +20,11 @@ def get_data():
     if(request.method == 'GET'):
         filePath = request.args['filePath']
         try:
-            return open(f"server/Section_Data/{filePath}", "r").read()
+            return open(f"Section_Data/{filePath}", "r").read()
         except:
-            return jsonify("Cannot find file. " + f"server/Section_Data/{filePath}")
+            return jsonify("Cannot find file. " + f"Section_Data/{filePath}")
     
-    return None
+    return ""
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 4000))  # 👈 same idea as process.env.PORT || 4000
