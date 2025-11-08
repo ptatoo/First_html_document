@@ -36,9 +36,9 @@ def parseTime(text: str):
     returned = ['','']
     for line in lines:
         if(line[0] == '-'):
-            returned[1] += line[1:]
+            returned[1] += f" {line[1:]}"
         else:
-            returned[0] += line
+            returned[0] += f" {line}"
 
     return returned
 
@@ -125,7 +125,8 @@ class UCLAScraper:
             "waitlist_status" : row.select_one('.waitlistColumn').get_text(strip=True),
             "days" : row.select_one('.dayColumn').get_text(strip=True, separator=", "),
             "start_time" : (times := parseTime(row.select_one('div[id*="-days_data"] + p').get_text(separator="\n")))[0],
-            "location" : times[1],
+            "end_time" : times[1],
+            "location" : row.select_one('.locationColumn').get_text(strip=True, separator=", "),
             "units" : row.select_one('.unitsColumn').get_text(strip=True),
             "instructors" : row.select_one('.instructorColumn').get_text(separator=', ', strip = True)
         }
