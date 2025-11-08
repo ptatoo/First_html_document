@@ -14,7 +14,6 @@ def run_task():
 @app.route("/")
 def hello_world():
     return "Hello, World!"
-
 @app.route("/get", methods = ['GET'])
 def get_data():
     if(request.method == 'GET'):
@@ -25,7 +24,7 @@ def get_data():
             try:
                 return open(f"section_data/{filePath}", "r").read()
             except:
-                return jsonify("Cannot find file. " + f"server/Section_Data/{filePath}")
+                return jsonify("Cannot find file. " +  f"FileName: {filePath}")
     
     return ""
 
