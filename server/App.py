@@ -26,12 +26,9 @@ def get_data():
 
         #tries to open file
         try:
-            file = open(f"server/section_data/{filePath}", "r").readlines()
+            file = open(f"section_data/{filePath}", "r").readlines()
         except:
-            try:
-                file = open(f"section_data/{filePath}", "r").readlines()
-            except:
-                return jsonify("Cannot find file. " +  f"FileName: {filePath}")
+            return jsonify("Cannot find file. " +  f"FileName: {filePath}")
             
         #converts csv data into json data and returns
         csv_reader = csv.DictReader(file)

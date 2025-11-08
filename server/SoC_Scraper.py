@@ -26,7 +26,7 @@ def wrapper_worker(args):
 def SoC_Scraper():
     
     #opens csv file
-    subject_csv = open("server/Subjects.txt", "r")
+    subject_csv = open("Subjects.txt", "r")
 
     #stores subjectID string
     subjectID_list = []
