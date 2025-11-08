@@ -29,7 +29,7 @@ def get_data():
             file = open(f"server/section_data/{filePath}", "r").readlines()
         except:
             try:
-                file = open(f"section_data/{filePath}", "r").read()
+                file = open(f"section_data/{filePath}", "r").readlines()
             except:
                 return jsonify("Cannot find file. " +  f"FileName: {filePath}")
             
