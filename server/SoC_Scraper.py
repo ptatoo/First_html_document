@@ -51,7 +51,7 @@ def SoC_Scraper():
     
     #creates job args from the batches
     job_args = [(batch, "25F", True) for batch in batches]
-    job_args = [(["MATH"], "25F", True)]
+    job_args = [(["MATH"], "25F", False)]
 
     print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
     print("-" * 50)
@@ -62,5 +62,5 @@ def SoC_Scraper():
 
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
-    return open("server/Section_Data/Math.csv", "r").read()
+    return open("Section_Data/Math.csv", "r").read()
     sys.stdout.flush()

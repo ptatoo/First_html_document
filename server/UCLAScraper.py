@@ -224,19 +224,17 @@ class UCLAScraper:
         unpaged_tabs = []
         paged_tabs = []
         expanded_loading_tabs = []
-        expanded_loaded_tabs = []
         
         page = 0
 
         #stupid ass logic
-        while unloaded_tabs or unpaged_tabs or paged_tabs or expanded_loading_tabs or expanded_loaded_tabs:
+        while unloaded_tabs or unpaged_tabs or paged_tabs or expanded_loading_tabs:
             try:
                 #TS in weird ass order for optimization
                 print(unloaded_tabs)
                 print(unpaged_tabs)
                 print(paged_tabs)
                 print(expanded_loading_tabs)
-                print(expanded_loaded_tabs)
 
                 
                 #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
@@ -245,15 +243,8 @@ class UCLAScraper:
                     if(self.driver.execute_script("return document.readyState") == "complete"):
                         unpaged_tabs.append(handle)
                         unloaded_tabs.remove(handle)
+                    break
                         
-                #ts bottlenecks in loading if its tnot fully loaded, but less imprtant bottle neck compared to the o ther two, but still breaks cuz prio first one
-                for handle in paged_tabs:
-                    self.driver.switch_to.window(handle)
-                    if(self.isJqueryComplete()):
-                        self.expand_page()
-                        expanded_loading_tabs.append(handle)
-                        paged_tabs.remove(handle)
-
                 #TS not break in order bc it should be prioritized as it done'st bottle neck on loading
                 for handle in unpaged_tabs:
                     self.driver.switch_to.window(handle)
@@ -263,20 +254,32 @@ class UCLAScraper:
 
                     paged_tabs.append(handle)
                     unpaged_tabs.remove(handle)
+
+                #ts bottlenecks in loading if its tnot fully loaded, but less imprtant bottle neck compared to the o ther two, but still breaks cuz prio first one
+                for handle in paged_tabs:
+                    self.driver.switch_to.window(handle)
+                    if(self.isJqueryComplete()):
+                        self.expand_page()
+                        expanded_loading_tabs.append(handle)
+                        paged_tabs.remove(handle)
+
                 
                 #oospie
                 for handle in expanded_loading_tabs:
                     self.driver.switch_to.window(handle)
                     if(self.isJqueryComplete()):
-                        expanded_loaded_tabs.append(handle)
+                        self.scrape_HTML()
+                        if(unloaded_tabs):
+                            tab = unloaded_tabs.pop()
+                            self.click_on_page(1)
+                            self.driver.switch_to.window(tab)
+                            unpaged_tabs.append(handle)
                         expanded_loading_tabs.remove(handle)
-                        
-                #ts bottle necks second most bc loading in expanded data takes time, breaks bc of it too
-                for handle in expanded_loaded_tabs: 
-                    self.driver.switch_to.window(handle)
-                    self.scrape_HTML()
-                    expanded_loaded_tabs.remove(handle)
-                    self.driver.close()
+                        self.driver.close()
+                    else:
+                        break
+            
+                    
                 
                 
                 
@@ -295,7 +298,7 @@ class UCLAScraper:
         print(f"scraping {subject} {self.term}")
         #open up csv file
         section_keys = ["classId", "lec_dis", "status", "total_spots", "enrolled_spots", "waitlist_status", "days", "start_time", "end_time", "location", "units", "instructors"]
-        output_path = "./server/section_data/" + subject + ".csv"
+        output_path = "./section_data/" + subject + ".csv"
         startF = time.perf_counter()
         with open(output_path, "w", newline='') as section_file:
             self.lec_writer = csv.DictWriter(section_file, section_keys)

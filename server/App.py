@@ -4,6 +4,7 @@ from SoC_Scraper import SoC_Scraper
 import os
 import json
 import csv
+import waitress
 
 app = Flask(__name__)
 CORS(app)
@@ -26,7 +27,7 @@ def get_data():
 
         #tries to open file
         try:
-            file = open(f"section_data/{filePath}", "r").readlines()
+            file = open(f"server/section_data/{filePath}", "r").readlines()
         except:
             return jsonify("Cannot find file. " +  f"FileName: {filePath}")
             
@@ -42,4 +43,4 @@ def get_data():
 #main function
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 4000))
-    app.run(host="0.0.0.0", port=port)
+    waitress.serve(app,host="0.0.0.0", port=port)
