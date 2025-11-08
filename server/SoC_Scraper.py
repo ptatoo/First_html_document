@@ -62,5 +62,5 @@ def SoC_Scraper():
 
     print("-" * 50)
     print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
-    return open("Section_Data/Math.csv", "r").read()
+    return open("section_Data/Math.csv", "r").read()
     sys.stdout.flush()
