@@ -27,7 +27,7 @@ def get_data():
 
         #tries to open file
         try:
-            file = open(f"server/section_data/{filePath}", "r").readlines()
+            file = open(f"section_data/{filePath}", "r").readlines()
         except:
             return jsonify("Cannot find file. " +  f"FileName: {filePath}")
             
