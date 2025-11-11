@@ -64,5 +64,5 @@ def SoC_Scraper(subjects_path, section_directory):
         print(f"All workers finished. Total execution time: {time.perf_counter() - start_time:.2f} seconds")
         return "no issue"
     except Exception as e:
-        return e
+        return str(e)
     sys.stdout.flush()
