@@ -18,7 +18,7 @@ def update():
 
     copy()
     result = SoC_Scraper("subjects.txt", sec_path)
-    return {"message": result}
+    return "yay"
 
 def copy():
     sec_path = "section_data"
