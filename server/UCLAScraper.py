@@ -235,7 +235,21 @@ class UCLAScraper:
                 print(unpaged_tabs)
                 print(paged_tabs)
                 print(expanded_loading_tabs)
-
+                
+                #oospie
+                for handle in expanded_loading_tabs:
+                    self.driver.switch_to.window(handle)
+                    if(self.isJqueryComplete()):
+                        self.scrape_HTML()
+                        if(unloaded_tabs):
+                            tab = unloaded_tabs.pop()
+                            self.click_on_page(1)
+                            self.driver.switch_to.window(tab)
+                            unpaged_tabs.append(handle)
+                        expanded_loading_tabs.remove(handle)
+                        self.driver.close()
+                    else:
+                        break
                 
                 #ts bottle necks the most cuz it always immidately continuously loads, breaks bc of it too
                 for handle in unloaded_tabs:
@@ -263,21 +277,6 @@ class UCLAScraper:
                         expanded_loading_tabs.append(handle)
                         paged_tabs.remove(handle)
 
-                
-                #oospie
-                for handle in expanded_loading_tabs:
-                    self.driver.switch_to.window(handle)
-                    if(self.isJqueryComplete()):
-                        self.scrape_HTML()
-                        if(unloaded_tabs):
-                            tab = unloaded_tabs.pop()
-                            self.click_on_page(1)
-                            self.driver.switch_to.window(tab)
-                            unpaged_tabs.append(handle)
-                        expanded_loading_tabs.remove(handle)
-                        self.driver.close()
-                    else:
-                        break
             
             except Exception as e: 
                 if(e):

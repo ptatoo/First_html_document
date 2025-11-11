@@ -13,8 +13,11 @@ CORS(app)
 
 @app.route('/update')
 def update():
+    sec_path = "section_data"
+    last_sec_path = "last_section_data"
+
     copy()
-    result = SoC_Scraper()
+    result = SoC_Scraper("subjects.txt", sec_path)
     return {"message": result}
 
 def copy():
@@ -60,7 +63,6 @@ if __name__ == '__main__':
     scheduler = BackgroundScheduler()
     job = scheduler.add_job(update, 'interval', minutes=20)
     scheduler.start()
-
 
     port = int(os.environ.get("PORT", 4000))
     waitress.serve(app,host="0.0.0.0", port=port)
