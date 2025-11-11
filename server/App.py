@@ -17,7 +17,7 @@ def update():
     last_sec_path = "last_section_data"
 
     copy()
-    result = SoC_Scraper("subjects.txt", sec_path)
+    result = SoC_Scraper("Subjects.txt", sec_path)
     return result
 
 def copy():
