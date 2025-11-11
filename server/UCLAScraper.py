@@ -279,10 +279,6 @@ class UCLAScraper:
                     else:
                         break
             
-                    
-                
-                
-                
             except Exception as e: 
                 if(e):
                     print(e)   

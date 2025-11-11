@@ -26,6 +26,8 @@ dist-ssr
 
 # folders
 **/section_data/*
+**/last_section_data/*
 !**/section_data/MATH.csv
-**/really beta stuff.py
+!**/last_section_data/MATH.csv
+
 .env
