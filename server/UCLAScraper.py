@@ -288,6 +288,8 @@ class UCLAScraper:
         end = time.perf_counter()
         print("TT scrape: " + f"{end-start}")   
 
+        
+
     #searches for subject, searches for each section, writes it to csv file
     def scrape_subject(self, subject: str):
         print(f"scraping {subject} {self.term}")
