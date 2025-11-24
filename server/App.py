@@ -57,6 +57,25 @@ def get_data():
     
     return ""
 
+@app.route("/displayChanges")
+def displayChanges():
+    sec_path = "section_data"
+    last_sec_path = "last_section_data"
+
+    subject_paths = set()
+    for root, folders, files in os.walk(sec_path):
+        for filename in files:
+            file_path = os.path.join(root,filename)
+            subject_paths.add(file_path)
+
+    last_subject_paths = set()
+    for root, folders, files in os.walk(sec_path):
+        for filename in files:
+            file_path = os.path.join(root,filename)
+            last_subject_paths.add(file_path)
+
+    common_files = subject_paths.intersection(last_subject_paths)
+            
 
 #main function
 if __name__ == '__main__':
