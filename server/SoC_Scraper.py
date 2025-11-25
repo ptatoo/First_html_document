@@ -51,11 +51,12 @@ def SoC_Scraper(subjects_path, section_directory):
         
         #creates job args from the batches
         job_args = [(batch, "26W", True) for batch in batches]
-        job_args = [(["MATH"], "26W", False)]
+        job_args = [(["MATH"], "26W", True)]
 
         print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
         print("-" * 50)
         print(job_args)
+        
         # PROCESS POOL EXECUTOR
         with ProcessPoolExecutor(max_workers=num_workers) as executor:
             executor.map(wrapper_worker, job_args)

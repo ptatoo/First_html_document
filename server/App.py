@@ -28,7 +28,7 @@ GOOGLE_SECRET_KEY = os.environ['GOOGLE_SECRET_KEY']
 def login2():
     return jsonify(message="LOL SO GAY"), 200
 
-@app.route('/google_login', methods=['POST'])
+@app.route('/google/auth', methods=['POST'])
 def login():
     auth_code = request.get_json()['code']
 
