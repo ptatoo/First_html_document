@@ -24,6 +24,10 @@ load_dotenv()  # Load the environment variables from the .env file
 GOOGLE_CLIENT_ID = os.environ['GOOGLE_CLIENT_ID']
 GOOGLE_SECRET_KEY = os.environ['GOOGLE_SECRET_KEY']
 
+@app.route('/login', methods=['POST'])
+def login2():
+    return jsonify(message="LOL SO GAY"), 200
+
 @app.route('/google_login', methods=['POST'])
 def login():
     auth_code = request.get_json()['code']

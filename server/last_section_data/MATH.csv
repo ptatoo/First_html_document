@@ -1,324 +1,210 @@
 classId,lec_dis,status,total_spots,enrolled_spots,waitlist_status,days,start_time,end_time,location,units,instructors
-MATH0003B,Lec 1,Open,70,23,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5200,4.0,"Greene, M.P."
-MATH0003B,Dis 1A,Open,35,18,No Waitlist,T, 10am, 10:50am,Mathematical Sciences 5138,0.0,TA
-MATH0003B,Dis 1B,Open,35,5,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 5138,0.0,TA
-MATH0031A,Lec 1,Open,70,11,No Waitlist,MWF, 8am, 8:50am,Mathematical Sciences 5200,4.0,The Staff
-MATH0031A,Dis 1A,Open,35,10,No Waitlist,T, 8am, 8:50am,Boelter Hall 5264,0.0,TA
-MATH0031A,Dis 1B,Open,35,4,No Waitlist,R, 8am, 8:50am,Boelter Hall 5264,0.0,TA
-MATH0031A,Dis 1C,Closed by Dept ,0,0,No Waitlist,T, 8am, 8:50am,No Location,0.0,TA
-MATH0031A,Dis 1D,Closed by Dept ,0,0,No Waitlist,R, 8am, 8:50am,No Location,0.0,TA
-MATH0031A,Dis 1E,Closed by Dept ,0,0,No Waitlist,T, 8am, 8:50am,No Location,0.0,TA
-MATH0031A,Dis 1F,Closed by Dept ,0,0,No Waitlist,R, 8am, 8:50am,No Location,0.0,TA
-MATH0031A,Lec 2,Open,210,23,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 4000A,4.0,"Keranen, J.P."
-MATH0031A,Dis 2A,Open,35,12,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0031A,Dis 2B,Open,35,7,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0031A,Dis 2C,Open,35,3,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0031A,Dis 2D,Open,35,0,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0031A,Dis 2E,Open,35,1,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0031A,Dis 2F,Open,35,2,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0031A,Lec 3,Open,210,30,No Waitlist,MWF, 1pm, 1:50pm,Rolfe Hall 1200,4.0,"Higgins, V."
-MATH0031A,Dis 3A,Open,35,21,No Waitlist,T, 1pm, 1:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0031A,Dis 3B,Open,35,4,No Waitlist,R, 1pm, 1:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0031A,Dis 3C,Open,35,6,No Waitlist,T, 1pm, 1:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0031A,Dis 3D,Open,35,5,No Waitlist,R, 1pm, 1:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0031A,Dis 3E,Open,35,0,No Waitlist,T, 1pm, 1:50pm,Young Hall 2200,0.0,TA
-MATH0031A,Dis 3F,Open,35,1,No Waitlist,R, 1pm, 1:50pm,Young Hall 2200,0.0,TA
-MATH0031AL,Lec 1,Open,132,24,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 4000A,5.0,"Dallas, H.J."
-MATH0031AL,Dis 1A,Open,20,7,No Waitlist,T, 10am, 11:50am,Haines Hall 122,0.0,TA
-MATH0031AL,Dis 1B,Open,35,2,No Waitlist,T, 10am, 11:50am,Mathematical Sciences 6627,0.0,TA
-MATH0031AL,Dis 1C,Open,16,8,No Waitlist,T, 12pm, 1:50pm,Public Affairs Building 2292,0.0,TA
-MATH0031AL,Dis 1D,Open,16,1,No Waitlist,T, 12pm, 1:50pm,Bunche Hall 2174,0.0,TA
-MATH0031AL,Dis 1E,Open,25,8,No Waitlist,T, 2pm, 3:50pm,Mathematical Sciences 6221,0.0,TA
-MATH0031AL,Dis 1F,Open,20,4,No Waitlist,T, 2pm, 3:50pm,Haines Hall 122,0.0,TA
-MATH0031B,Lec 1,Open,210,16,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 4000A,4.0,"Johnson, C.L."
-MATH0031B,Dis 1A,Open,35,11,No Waitlist,T, 9am, 9:50am,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Dis 1B,Open,35,4,No Waitlist,R, 9am, 9:50am,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Dis 1C,Open,35,2,No Waitlist,T, 9am, 9:50am,Mathematical Sciences 5138,0.0,TA
-MATH0031B,Dis 1D,Open,35,0,No Waitlist,R, 9am, 9:50am,Mathematical Sciences 5138,0.0,TA
-MATH0031B,Dis 1E,Open,35,1,No Waitlist,T, 9am, 9:50am,Kaufman Hall 101,0.0,TA
-MATH0031B,Dis 1F,Open,35,1,No Waitlist,R, 9am, 9:50am,Kaufman Hall 101,0.0,TA
-MATH0031B,Lec 2,Open,210,121,No Waitlist,MWF, 10am, 10:50am,Young Hall CS76,4.0,"Arant, T.J."
-MATH0031B,Dis 2A,Closed,35,35,No Waitlist,T, 10am, 10:50am,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Dis 2B,Closed,35,35,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Dis 2C,Open,35,31,No Waitlist,T, 10am, 10:50am,Public Affairs Building 2238,0.0,TA
-MATH0031B,Dis 2D,Open,35,15,No Waitlist,R, 10am, 10:50am,Public Affairs Building 2238,0.0,TA
-MATH0031B,Dis 2E,Open,35,33,No Waitlist,T, 10am, 10:50am,Boelter Hall 5419,0.0,TA
-MATH0031B,Dis 2F,Open,35,17,No Waitlist,R, 10am, 10:50am,Boelter Hall 5419,0.0,TA
-MATH0031B,Lec 3,Open,176,45,No Waitlist,MWF, 1pm, 1:50pm,Young Hall CS76,4.0,"Lopez Rivera, P."
-MATH0031B,Dis 3A,Open,32,26,No Waitlist,T, 1pm, 1:50pm,Dodd Hall 178,0.0,TA
-MATH0031B,Dis 3B,Open,32,15,No Waitlist,R, 1pm, 1:50pm,Dodd Hall 178,0.0,TA
-MATH0031B,Dis 3C,Open,28,9,No Waitlist,T, 1pm, 1:50pm,Bunche Hall 2168,0.0,TA
-MATH0031B,Dis 3D,Open,28,5,No Waitlist,R, 1pm, 1:50pm,Bunche Hall 2168,0.0,TA
-MATH0031B,Dis 3E,Open,28,6,No Waitlist,T, 1pm, 1:50pm,Public Affairs Building 2325,0.0,TA
-MATH0031B,Dis 3F,Open,28,5,No Waitlist,R, 1pm, 1:50pm,Public Affairs Building 2325,0.0,TA
-MATH0031B,Lec 4,Open,210,8,No Waitlist,MWF, 3pm, 3:50pm,Young Hall CS76,4.0,"Zhang, Z."
-MATH0031B,Dis 4A,Open,35,3,No Waitlist,T, 3pm, 3:50pm,Bunche Hall 3157,0.0,TA
-MATH0031B,Dis 4B,Open,35,3,No Waitlist,R, 3pm, 3:50pm,Bunche Hall 3157,0.0,TA
-MATH0031B,Dis 4C,Open,35,1,No Waitlist,T, 3pm, 3:50pm,Public Affairs Building 2232,0.0,TA
-MATH0031B,Dis 4D,Open,35,1,No Waitlist,R, 3pm, 3:50pm,Public Affairs Building 2232,0.0,TA
-MATH0031B,Dis 4E,Open,35,2,No Waitlist,T, 3pm, 3:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Dis 4F,Open,35,1,No Waitlist,R, 3pm, 3:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0031B,Lec 5,Open,210,38,No Waitlist,MWF, 4pm, 4:50pm,Broad Art Center 2160E,4.0,"Flynn, P."
-MATH0031B,Dis 5A,Open,35,20,No Waitlist,T, 4pm, 4:50pm,Boelter Hall 5264,0.0,TA
-MATH0031B,Dis 5B,Open,35,6,No Waitlist,R, 4pm, 4:50pm,Boelter Hall 5264,0.0,TA
-MATH0031B,Dis 5C,Open,35,7,No Waitlist,T, 4pm, 4:50pm,Boelter Hall 5273,0.0,TA
-MATH0031B,Dis 5D,Open,35,4,No Waitlist,R, 4pm, 4:50pm,Boelter Hall 5273,0.0,TA
-MATH0031B,Dis 5E,Open,35,4,No Waitlist,T, 4pm, 4:50pm,Boelter Hall 5440,0.0,TA
-MATH0031B,Dis 5F,Open,35,3,No Waitlist,R, 4pm, 4:50pm,Boelter Hall 5440,0.0,TA
-MATH0032A,Lec 1,Open,210,19,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 4000A,4.0,"Vashaw, K."
-MATH0032A,Dis 1A,Open,35,13,No Waitlist,T, 10am, 10:50am,Dodd Hall 78,0.0,TA
-MATH0032A,Dis 1B,Open,35,2,No Waitlist,R, 10am, 10:50am,Dodd Hall 78,0.0,TA
-MATH0032A,Dis 1C,Open,35,2,No Waitlist,T, 10am, 10:50am,Rolfe Hall 3126,0.0,TA
-MATH0032A,Dis 1D,Open,35,4,No Waitlist,R, 10am, 10:50am,Rolfe Hall 3126,0.0,TA
-MATH0032A,Dis 1E,Open,35,3,No Waitlist,T, 10am, 10:50am,Mathematical Sciences 5128,0.0,TA
-MATH0032A,Dis 1F,Open,35,2,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 5128,0.0,TA
-MATH0032A,Lec 2,Open,210,25,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 4000A,4.0,"Khitrik, M."
-MATH0032A,Dis 2A,Open,35,18,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5137,0.0,TA
-MATH0032A,Dis 2B,Open,35,8,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5137,0.0,TA
-MATH0032A,Dis 2C,Open,35,5,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5127,0.0,TA
-MATH0032A,Dis 2D,Open,35,3,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5127,0.0,TA
-MATH0032A,Dis 2E,Open,35,3,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5138,0.0,TA
-MATH0032A,Dis 2F,Open,35,2,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5138,0.0,TA
-MATH0032A,Lec 3,Open,210,69,No Waitlist,MWF, 1pm, 1:50pm,Franz Hall 1178,4.0,"Kan, K."
-MATH0032A,Dis 3A,Open,35,25,No Waitlist,T, 1pm, 1:50pm,Boelter Hall 5422,0.0,TA
-MATH0032A,Dis 3B,Open,35,14,No Waitlist,R, 1pm, 1:50pm,Boelter Hall 5422,0.0,TA
-MATH0032A,Dis 3C,Open,35,11,No Waitlist,T, 1pm, 1:50pm,Boelter Hall 5420,0.0,TA
-MATH0032A,Dis 3D,Open,35,8,No Waitlist,R, 1pm, 1:50pm,Boelter Hall 5420,0.0,TA
-MATH0032A,Dis 3E,Open,35,9,No Waitlist,T, 1pm, 1:50pm,Mathematical Sciences 5147,0.0,TA
-MATH0032A,Dis 3F,Open,35,10,No Waitlist,R, 1pm, 1:50pm,Mathematical Sciences 5147,0.0,TA
-MATH0032A,Lec 4,Open,210,42,No Waitlist,MWF, 3pm, 3:50pm,Young Hall CS24,4.0,"Li, L."
-MATH0032A,Dis 4A,Open,35,25,No Waitlist,T, 3pm, 3:50pm,Moore Hall 1003,0.0,TA
-MATH0032A,Dis 4B,Open,35,11,No Waitlist,R, 3pm, 3:50pm,Boelter Hall 5440,0.0,TA
-MATH0032A,Dis 4C,Open,35,8,No Waitlist,T, 3pm, 3:50pm,Boelter Hall 5252,0.0,TA
-MATH0032A,Dis 4D,Open,35,5,No Waitlist,R, 3pm, 3:50pm,Boelter Hall 5252,0.0,TA
-MATH0032A,Dis 4E,Open,35,1,No Waitlist,T, 3pm, 3:50pm,Dodd Hall 178,0.0,TA
-MATH0032A,Dis 4F,Open,35,4,No Waitlist,R, 3pm, 3:50pm,Bunche Hall 2178,0.0,TA
-MATH0032B,Lec 1,Open,210,86,No Waitlist,MWF, 9am, 9:50am,Franz Hall 1178,4.0,"Beers, D."
-MATH0032B,Dis 1A,Open,35,34,No Waitlist,T, 9am, 9:50am,Boelter Hall 5436,0.0,TA
-MATH0032B,Dis 1B,Open,35,23,No Waitlist,R, 9am, 9:50am,Boelter Hall 5436,0.0,TA
-MATH0032B,Dis 1C,Open,35,13,No Waitlist,T, 9am, 9:50am,Boelter Hall 5420,0.0,TA
-MATH0032B,Dis 1D,Open,35,11,No Waitlist,R, 9am, 9:50am,Boelter Hall 5420,0.0,TA
-MATH0032B,Dis 1E,Open,35,13,No Waitlist,T, 9am, 9:50am,Royce Hall 154,0.0,TA
-MATH0032B,Dis 1F,Open,35,12,No Waitlist,R, 9am, 9:50am,Royce Hall 154,0.0,TA
-MATH0032B,Lec 2,Open,210,94,No Waitlist,MWF, 12pm, 12:50pm,Rolfe Hall 1200,4.0,"Tan, H."
-MATH0032B,Dis 2A,Closed,35,35,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5118,0.0,TA
-MATH0032B,Dis 2B,Open,35,28,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5118,0.0,TA
-MATH0032B,Dis 2C,Open,35,20,No Waitlist,T, 12pm, 12:50pm,Geology Building 6704,0.0,TA
-MATH0032B,Dis 2D,Open,35,10,No Waitlist,R, 12pm, 12:50pm,Geology Building 6704,0.0,TA
-MATH0032B,Dis 2E,Open,35,13,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0032B,Dis 2F,Open,35,9,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0032B,Lec 3,Open,210,18,No Waitlist,MWF, 4pm, 4:50pm,Mathematical Sciences 4000A,4.0,"Diepeveen, W."
-MATH0032B,Dis 3A,Open,35,14,No Waitlist,T, 4pm, 4:50pm,Mathematical Sciences 5118,0.0,TA
-MATH0032B,Dis 3B,Open,35,8,No Waitlist,R, 4pm, 4:50pm,Mathematical Sciences 5118,0.0,TA
-MATH0032B,Dis 3C,Open,35,2,No Waitlist,T, 4pm, 4:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0032B,Dis 3D,Open,35,7,No Waitlist,R, 4pm, 4:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0032B,Dis 3E,Open,35,1,No Waitlist,T, 4pm, 4:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0032B,Dis 3F,Open,35,2,No Waitlist,R, 4pm, 4:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0033A,Lec 1,Closed,210,210,No Waitlist,MWF, 11am, 11:50am,Rolfe Hall 1200,4.0,"Katay, T."
-MATH0033A,Dis 1A,Closed,35,35,No Waitlist,T, 11am, 11:50am,Boelter Hall 5422,0.0,TA
-MATH0033A,Dis 1B,Closed,35,35,No Waitlist,R, 11am, 11:50am,Boelter Hall 5422,0.0,TA
-MATH0033A,Dis 1C,Closed,35,35,No Waitlist,T, 11am, 11:50am,Public Affairs Building 2238,0.0,TA
-MATH0033A,Dis 1D,Closed,35,35,No Waitlist,R, 11am, 11:50am,Public Affairs Building 2238,0.0,TA
-MATH0033A,Dis 1E,Closed,35,35,No Waitlist,T, 11am, 11:50am,Boelter Hall 5419,0.0,TA
-MATH0033A,Dis 1F,Closed,35,35,No Waitlist,R, 11am, 11:50am,Boelter Hall 5419,0.0,TA
-MATH0033A,Lec 2,Open,203,191,No Waitlist,MWF, 12pm, 12:50pm,Franz Hall 1178,4.0,"Venkatesh, S."
-MATH0033A,Dis 2A,Closed,35,35,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5147,0.0,TA
-MATH0033A,Dis 2B,Closed,35,35,No Waitlist,R, 12pm, 12:50pm,Mathematical Sciences 5147,0.0,TA
-MATH0033A,Dis 2C,Closed,35,35,No Waitlist,T, 12pm, 12:50pm,Franz Hall 2288,0.0,TA
-MATH0033A,Dis 2D,Closed,35,35,No Waitlist,R, 12pm, 12:50pm,Boelter Hall 5422,0.0,TA
-MATH0033A,Dis 2E,Closed,28,28,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 5217,0.0,TA
-MATH0033A,Dis 2F,Closed,35,35,No Waitlist,R, 12pm, 12:50pm,Boelter Hall 5420,0.0,TA
-MATH0033B,Lec 1,Open,210,88,No Waitlist,MWF, 9am, 9:50am,Young Hall CS76,4.0,"Zhao, Z."
-MATH0033B,Dis 1A,Closed,35,35,No Waitlist,T, 9am, 9:50am,Boelter Hall 5280,0.0,TA
-MATH0033B,Dis 1B,Open,35,21,No Waitlist,R, 9am, 9:50am,Boelter Hall 5280,0.0,TA
-MATH0033B,Dis 1C,Open,35,11,No Waitlist,T, 9am, 9:50am,Boelter Hall 5419,0.0,TA
-MATH0033B,Dis 1D,Open,35,6,No Waitlist,R, 9am, 9:50am,Boelter Hall 5419,0.0,TA
-MATH0033B,Dis 1E,Open,35,13,No Waitlist,T, 9am, 9:50am,Boelter Hall 5272,0.0,TA
-MATH0033B,Dis 1F,Open,35,7,No Waitlist,R, 9am, 9:50am,Boelter Hall 5272,0.0,TA
-MATH0033B,Lec 2,Open,210,121,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 4000A,4.0,"Munoz, S."
-MATH0033B,Dis 2A,Closed,35,35,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0033B,Dis 2B,Open,35,30,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0033B,Dis 2C,Closed,35,35,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0033B,Dis 2D,Open,35,12,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0033B,Dis 2E,Open,35,12,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0033B,Dis 2F,Open,35,10,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0061,Lec 1,Open,210,53,No Waitlist,MWF, 2pm, 2:50pm,Franz Hall 1178,4.0,"Soskin, D."
-MATH0061,Dis 1A,Open,35,34,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0061,Dis 1B,Open,35,10,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 5137,0.0,TA
-MATH0061,Dis 1C,Open,35,12,No Waitlist,T, 2pm, 2:50pm,Geology Building 4645,0.0,TA
-MATH0061,Dis 1D,Open,35,1,No Waitlist,R, 2pm, 2:50pm,Geology Building 4645,0.0,TA
-MATH0061,Dis 1E,Open,35,8,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 6229,0.0,TA
-MATH0061,Dis 1F,Open,35,2,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 6229,0.0,TA
-MATH0061,Lec 2,Open,210,15,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 4000A,4.0,"Kasum, O."
-MATH0061,Dis 2A,Open,35,14,No Waitlist,T, 3pm, 3:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0061,Dis 2B,Open,35,0,No Waitlist,R, 3pm, 3:50pm,Mathematical Sciences 5117,0.0,TA
-MATH0061,Dis 2C,Open,35,1,No Waitlist,T, 3pm, 3:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0061,Dis 2D,Open,35,1,No Waitlist,R, 3pm, 3:50pm,Mathematical Sciences 5127,0.0,TA
-MATH0061,Dis 2E,Open,35,1,No Waitlist,T, 3pm, 3:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0061,Dis 2F,Open,35,1,No Waitlist,R, 3pm, 3:50pm,Mathematical Sciences 5138,0.0,TA
-MATH0074XP,Sem 1,Open,30,1,No Waitlist,T, 2pm, 3:50pm,Mathematical Sciences 5203,3.0,"Chan, H.H."
-MATH0074XP,Fld 1A,Open,30,1,No Waitlist,T, 2pm, 3:50pm,Off campus,0.0,"Chan, H.H."
-MATH0105B,Lec 1,Open,25,2,No Waitlist,MW, 1pm, 2:50pm,Mathematical Sciences 6221,4.0,"Lopez, I."
-MATH0106,Lec 1,Open,80,43,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building 1246,4.0,"Xu, P."
-MATH0110A,Lec 1,Open,40,16,No Waitlist,MWF, 11am, 11:50am,Geology Building 6704,4.0,"Vashaw, K."
-MATH0110B,Lec 1,Open,40,14,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5117,4.0,"Keranen, J.P."
-MATH0110BH,Lec 1,Open,40,3,No Waitlist,MWF, 1pm, 1:50pm,Geology Building 6704,4.0,The Staff
-MATH0114C,Lec 1,Open,40,7,No Waitlist,MWF, 9am, 9:50am,Geology Building 6704,4.0,"Arant, T.J."
+MATH0003B,Lec 1,Waitlist,0,0,1 of 6 Taken,MWF, 10am, 10:50am,Mathematical Sciences 5200,4.0,"Greene, M.P."
+MATH0003B,Dis 1A,Waitlist,0,0,1 of 3 Taken,T, 10am, 10:50am,Mathematical Sciences 5138,0.0,TA
+MATH0003B,Dis 1B,Waitlist,0,0,0 of 3 Taken,R, 10am, 10:50am,Mathematical Sciences 5138,0.0,TA
+MATH0019001,Sem 1,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,1.0,"Vese, L.A."
+MATH0031A,Lec 1,Open,70,36,0 of 6 Taken,MWF, 8am, 8:50am,Mathematical Sciences 5200,4.0,The Staff
+MATH0031A,Dis 1A,Open,35,28,0 of 3 Taken,T, 8am, 8:50am,Boelter Hall 5264,0.0,TA
+MATH0031A,Dis 1B,Open,35,8,0 of 3 Taken,R, 8am, 8:50am,Boelter Hall 5264,0.0,TA
+MATH0031A,Dis 1C,Cancelled,0,0,No Waitlist,T, 8am, 8:50am,No Location,0.0,No instructors
+MATH0031A,Dis 1D,Cancelled,0,0,No Waitlist,R, 8am, 8:50am,No Location,0.0,No instructors
+MATH0031A,Dis 1E,Cancelled,0,0,No Waitlist,T, 8am, 8:50am,No Location,0.0,No instructors
+MATH0031A,Dis 1F,Cancelled,0,0,No Waitlist,R, 8am, 8:50am,No Location,0.0,No instructors
+MATH0031A,Lec 2,Open,180,92,0 of 18 Taken,MWF, 12pm, 12:50pm,Mathematical Sciences 4000A,4.0,"Keranen, J.P."
+MATH0031A,Dis 2A,Waitlist,0,0,0 of 3 Taken,T, 12pm, 12:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0031A,Dis 2B,Open,35,18,0 of 3 Taken,R, 12pm, 12:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0031A,Dis 2C,Open,35,19,0 of 3 Taken,T, 12pm, 12:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0031A,Dis 2D,Open,20,2,0 of 3 Taken,R, 12pm, 12:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0031A,Dis 2E,Open,20,9,0 of 3 Taken,T, 12pm, 12:50pm,Haines Hall 122,0.0,TA
+MATH0031A,Dis 2F,Open,20,9,0 of 3 Taken,R, 12pm, 12:50pm,Haines Hall 122,0.0,TA
+MATH0031A,Lec 3,Open,210,113,0 of 18 Taken,MWF, 1pm, 1:50pm,Rolfe Hall 1200,4.0,"Higgins, V."
+MATH0031A,Dis 3A,Waitlist,0,0,0 of 3 Taken,T, 1pm, 1:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0031A,Dis 3B,Open,35,21,0 of 3 Taken,R, 1pm, 1:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0031A,Dis 3C,Open,35,32,0 of 3 Taken,T, 1pm, 1:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0031A,Dis 3D,Open,35,12,0 of 3 Taken,R, 1pm, 1:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0031A,Dis 3E,Open,35,7,0 of 3 Taken,T, 1pm, 1:50pm,Young Hall 2200,0.0,TA
+MATH0031A,Dis 3F,Open,35,6,0 of 3 Taken,R, 1pm, 1:50pm,Young Hall 2200,0.0,TA
+MATH0031AL,Lec 1,Open,188,82,0 of 18 Taken,MWF, 1pm, 1:50pm,Mathematical Sciences 4000A,5.0,"Dallas, H.J."
+MATH0031AL,Dis 1A,Open,35,13,0 of 3 Taken,T, 10am, 11:50am,Bunche Hall 3150,0.0,TA
+MATH0031AL,Dis 1B,Open,35,9,0 of 3 Taken,T, 10am, 11:50am,Mathematical Sciences 6627,0.0,TA
+MATH0031AL,Dis 1C,Open,28,16,0 of 3 Taken,T, 12pm, 1:50pm,Bunche Hall 2168,0.0,TA
+MATH0031AL,Dis 1D,Open,30,9,0 of 3 Taken,T, 12pm, 1:50pm,Franz Hall 2288,0.0,TA
+MATH0031AL,Dis 1E,Open,25,20,0 of 3 Taken,T, 2pm, 3:50pm,Mathematical Sciences 6221,0.0,TA
+MATH0031AL,Dis 1F,Open,35,15,0 of 3 Taken,T, 2pm, 3:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0031B,Lec 1,Open,210,168,0 of 18 Taken,MWF, 9am, 9:50am,Mathematical Sciences 4000A,4.0,"Johnson, C.L."
+MATH0031B,Dis 1A,Waitlist,0,0,0 of 3 Taken,T, 9am, 9:50am,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Dis 1B,Waitlist,0,0,0 of 3 Taken,R, 9am, 9:50am,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Dis 1C,Waitlist,0,0,0 of 3 Taken,T, 9am, 9:50am,Mathematical Sciences 5138,0.0,TA
+MATH0031B,Dis 1D,Open,35,31,0 of 3 Taken,R, 9am, 9:50am,Mathematical Sciences 5138,0.0,TA
+MATH0031B,Dis 1E,Open,35,20,0 of 3 Taken,T, 9am, 9:50am,Bunche Hall 3150,0.0,TA
+MATH0031B,Dis 1F,Open,35,12,0 of 3 Taken,R, 9am, 9:50am,Bunche Hall 3150,0.0,TA
+MATH0031B,Lec 2,Closed,210,210,Waitlist Full (18),MWF, 10am, 10:50am,Young Hall CS76,4.0,"Arant, T.J."
+MATH0031B,Dis 2A,Closed,35,35,Waitlist Full (3),T, 10am, 10:50am,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Dis 2B,Closed,35,35,Waitlist Full (3),R, 10am, 10:50am,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Dis 2C,Closed,35,35,Waitlist Full (3),T, 10am, 10:50am,Public Affairs Building 2238,0.0,TA
+MATH0031B,Dis 2D,Closed,35,35,Waitlist Full (3),R, 10am, 10:50am,Public Affairs Building 2238,0.0,TA
+MATH0031B,Dis 2E,Closed,35,35,Waitlist Full (3),T, 10am, 10:50am,Boelter Hall 5419,0.0,TA
+MATH0031B,Dis 2F,Closed,35,35,Waitlist Full (3),R, 10am, 10:50am,Boelter Hall 5419,0.0,TA
+MATH0031B,Lec 3,Closed,190,190,Waitlist Full (18),MWF, 1pm, 1:50pm,Young Hall CS76,4.0,"Lopez Rivera, P."
+MATH0031B,Dis 3A,Closed,32,32,Waitlist Full (3),T, 1pm, 1:50pm,Dodd Hall 178,0.0,TA
+MATH0031B,Dis 3B,Closed,32,32,Waitlist Full (3),R, 1pm, 1:50pm,Dodd Hall 178,0.0,TA
+MATH0031B,Dis 3C,Closed,35,35,Waitlist Full (3),T, 1pm, 1:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0031B,Dis 3D,Closed,35,35,Waitlist Full (3),R, 1pm, 1:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0031B,Dis 3E,Closed,28,28,Waitlist Full (3),T, 1pm, 1:50pm,Public Affairs Building 2325,0.0,TA
+MATH0031B,Dis 3F,Closed,28,28,Waitlist Full (3),R, 1pm, 1:50pm,Public Affairs Building 2325,0.0,TA
+MATH0031B,Lec 4,Waitlist,0,0,4 of 18 Taken,MWF, 3pm, 3:50pm,Young Hall CS76,4.0,"Gu, H."
+MATH0031B,Dis 4A,Waitlist,0,0,2 of 3 Taken,T, 3pm, 3:50pm,Bunche Hall 3157,0.0,TA
+MATH0031B,Dis 4B,Waitlist,0,0,0 of 3 Taken,R, 3pm, 3:50pm,Bunche Hall 3157,0.0,TA
+MATH0031B,Dis 4C,Waitlist,0,0,2 of 3 Taken,T, 3pm, 3:50pm,Public Affairs Building 2232,0.0,TA
+MATH0031B,Dis 4D,Waitlist,0,0,0 of 3 Taken,R, 3pm, 3:50pm,Public Affairs Building 2232,0.0,TA
+MATH0031B,Dis 4E,Waitlist,0,0,0 of 3 Taken,T, 3pm, 3:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Dis 4F,Waitlist,0,0,0 of 3 Taken,R, 3pm, 3:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0031B,Lec 5,Waitlist,0,0,15 of 18 Taken,MWF, 4pm, 4:50pm,Broad Art Center 2160E,4.0,"Flynn, P."
+MATH0031B,Dis 5A,Closed,35,35,Waitlist Full (3),T, 4pm, 4:50pm,Boelter Hall 5264,0.0,TA
+MATH0031B,Dis 5B,Waitlist,0,0,2 of 3 Taken,R, 4pm, 4:50pm,Boelter Hall 5264,0.0,TA
+MATH0031B,Dis 5C,Waitlist,0,0,2 of 3 Taken,T, 4pm, 4:50pm,Boelter Hall 5273,0.0,TA
+MATH0031B,Dis 5D,Waitlist,0,0,2 of 3 Taken,R, 4pm, 4:50pm,Boelter Hall 5273,0.0,TA
+MATH0031B,Dis 5E,Closed,35,35,Waitlist Full (3),T, 4pm, 4:50pm,Boelter Hall 5440,0.0,TA
+MATH0031B,Dis 5F,Closed,35,35,Waitlist Full (3),R, 4pm, 4:50pm,Boelter Hall 5440,0.0,TA
+MATH0032A,Lec 1,Open,210,202,1 of 18 Taken,MWF, 10am, 10:50am,Mathematical Sciences 4000A,4.0,"Vashaw, K."
+MATH0032A,Dis 1A,Waitlist,0,0,0 of 3 Taken,T, 10am, 10:50am,Dodd Hall 78,0.0,TA
+MATH0032A,Dis 1B,Open,35,34,0 of 3 Taken,R, 10am, 10:50am,Dodd Hall 78,0.0,TA
+MATH0032A,Dis 1C,Waitlist,0,0,1 of 3 Taken,T, 10am, 10:50am,Rolfe Hall 3126,0.0,TA
+MATH0032A,Dis 1D,Open,35,29,0 of 3 Taken,R, 10am, 10:50am,Rolfe Hall 3126,0.0,TA
+MATH0032A,Dis 1E,Waitlist,0,0,0 of 3 Taken,T, 10am, 10:50am,Mathematical Sciences 5128,0.0,TA
+MATH0032A,Dis 1F,Open,35,34,0 of 3 Taken,R, 10am, 10:50am,Mathematical Sciences 5128,0.0,TA
+MATH0032A,Lec 2,Waitlist,0,0,3 of 18 Taken,MWF, 11am, 11:50am,Mathematical Sciences 4000A,4.0,"Khitrik, M."
+MATH0032A,Dis 2A,Waitlist,0,0,0 of 3 Taken,T, 11am, 11:50am,Mathematical Sciences 5137,0.0,TA
+MATH0032A,Dis 2B,Waitlist,0,0,1 of 3 Taken,R, 11am, 11:50am,Mathematical Sciences 5137,0.0,TA
+MATH0032A,Dis 2C,Waitlist,0,0,0 of 3 Taken,T, 11am, 11:50am,Mathematical Sciences 5127,0.0,TA
+MATH0032A,Dis 2D,Waitlist,0,0,1 of 3 Taken,R, 11am, 11:50am,Mathematical Sciences 5127,0.0,TA
+MATH0032A,Dis 2E,Waitlist,0,0,1 of 3 Taken,T, 11am, 11:50am,Mathematical Sciences 5138,0.0,TA
+MATH0032A,Dis 2F,Waitlist,0,0,0 of 3 Taken,R, 11am, 11:50am,Mathematical Sciences 5138,0.0,TA
+MATH0032A,Lec 3,Waitlist,0,0,7 of 18 Taken,MWF, 1pm, 1:50pm,Franz Hall 1178,4.0,"Kan, K."
+MATH0032A,Dis 3A,Waitlist,0,0,1 of 3 Taken,T, 1pm, 1:50pm,Boelter Hall 5422,0.0,TA
+MATH0032A,Dis 3B,Waitlist,0,0,0 of 3 Taken,R, 1pm, 1:50pm,Boelter Hall 5422,0.0,TA
+MATH0032A,Dis 3C,Closed,35,35,Waitlist Full (3),T, 1pm, 1:50pm,Boelter Hall 5420,0.0,TA
+MATH0032A,Dis 3D,Waitlist,0,0,1 of 3 Taken,R, 1pm, 1:50pm,Boelter Hall 5420,0.0,TA
+MATH0032A,Dis 3E,Waitlist,0,0,2 of 3 Taken,T, 1pm, 1:50pm,Mathematical Sciences 5147,0.0,TA
+MATH0032A,Dis 3F,Waitlist,0,0,0 of 3 Taken,R, 1pm, 1:50pm,Mathematical Sciences 5147,0.0,TA
+MATH0032A,Lec 4,Waitlist,0,0,7 of 18 Taken,MWF, 3pm, 3:50pm,Young Hall CS24,4.0,"Li, L."
+MATH0032A,Dis 4A,Waitlist,0,0,2 of 3 Taken,T, 3pm, 3:50pm,Bunche Hall 3153,0.0,TA
+MATH0032A,Dis 4B,Waitlist,0,0,0 of 3 Taken,R, 3pm, 3:50pm,Bunche Hall 3153,0.0,TA
+MATH0032A,Dis 4C,Waitlist,0,0,1 of 3 Taken,T, 3pm, 3:50pm,Boelter Hall 5252,0.0,TA
+MATH0032A,Dis 4D,Waitlist,0,0,1 of 3 Taken,R, 3pm, 3:50pm,Boelter Hall 5252,0.0,TA
+MATH0032A,Dis 4E,Closed,35,35,Waitlist Full (3),T, 3pm, 3:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0032A,Dis 4F,Waitlist,0,0,0 of 3 Taken,R, 3pm, 3:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0032B,Lec 1,Closed,210,210,Waitlist Full (18),MWF, 9am, 9:50am,Franz Hall 1178,4.0,"Beers, D."
+MATH0032B,Dis 1A,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Boelter Hall 5436,0.0,TA
+MATH0032B,Dis 1B,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Boelter Hall 5436,0.0,TA
+MATH0032B,Dis 1C,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Boelter Hall 5420,0.0,TA
+MATH0032B,Dis 1D,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Boelter Hall 5420,0.0,TA
+MATH0032B,Dis 1E,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Royce Hall 154,0.0,TA
+MATH0032B,Dis 1F,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Royce Hall 154,0.0,TA
+MATH0032B,Lec 2,Closed,210,210,Waitlist Full (18),MWF, 12pm, 12:50pm,Rolfe Hall 1200,4.0,"Tan, H."
+MATH0032B,Dis 2A,Closed,35,35,Waitlist Full (3),T, 12pm, 12:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0032B,Dis 2B,Closed,35,35,Waitlist Full (3),R, 12pm, 12:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0032B,Dis 2C,Closed,35,35,Waitlist Full (3),T, 12pm, 12:50pm,Geology Building 6704,0.0,TA
+MATH0032B,Dis 2D,Closed,35,35,Waitlist Full (3),R, 12pm, 12:50pm,Geology Building 6704,0.0,TA
+MATH0032B,Dis 2E,Closed,35,35,Waitlist Full (3),T, 12pm, 12:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0032B,Dis 2F,Closed,35,35,Waitlist Full (3),R, 12pm, 12:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0032B,Lec 3,Closed,210,210,Waitlist Full (18),MWF, 4pm, 4:50pm,Mathematical Sciences 4000A,4.0,"Diepeveen, W."
+MATH0032B,Dis 3A,Closed,35,35,Waitlist Full (3),T, 4pm, 4:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0032B,Dis 3B,Closed,35,35,Waitlist Full (3),R, 4pm, 4:50pm,Mathematical Sciences 5118,0.0,TA
+MATH0032B,Dis 3C,Closed,35,35,Waitlist Full (3),T, 4pm, 4:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0032B,Dis 3D,Closed,35,35,Waitlist Full (3),R, 4pm, 4:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0032B,Dis 3E,Closed,35,35,Waitlist Full (3),T, 4pm, 4:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0032B,Dis 3F,Closed,35,35,Waitlist Full (3),R, 4pm, 4:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0033A,Lec 1,Closed,210,210,Waitlist Full (18),MWF, 11am, 11:50am,Rolfe Hall 1200,4.0,"Katay, T."
+MATH0033A,Dis 1A,Closed,35,35,Waitlist Full (3),T, 11am, 11:50am,Boelter Hall 5422,0.0,TA
+MATH0033A,Dis 1B,Closed,35,35,Waitlist Full (3),R, 11am, 11:50am,Boelter Hall 5422,0.0,TA
+MATH0033A,Dis 1C,Closed,35,35,Waitlist Full (3),T, 11am, 11:50am,Public Affairs Building 2238,0.0,TA
+MATH0033A,Dis 1D,Closed,35,35,Waitlist Full (3),R, 11am, 11:50am,Public Affairs Building 2238,0.0,TA
+MATH0033A,Dis 1E,Closed,35,35,Waitlist Full (3),T, 11am, 11:50am,Boelter Hall 5419,0.0,TA
+MATH0033A,Dis 1F,Closed,35,35,Waitlist Full (3),R, 11am, 11:50am,Boelter Hall 5419,0.0,TA
+MATH0033A,Lec 2,Closed,204,206,18 of 15 Taken,MWF, 12pm, 12:50pm,Franz Hall 1178,4.0,"Venkatesh, S."
+MATH0033A,Dis 2A,Closed,35,35,Waitlist Full (3),T, 12pm, 12:50pm,Mathematical Sciences 5147,0.0,TA
+MATH0033A,Dis 2B,Closed,35,35,Waitlist Full (3),R, 12pm, 12:50pm,Mathematical Sciences 5147,0.0,TA
+MATH0033A,Dis 2C,Closed,35,35,Waitlist Full (3),T, 12pm, 12:50pm,Bunche Hall 3150,0.0,TA
+MATH0033A,Dis 2D,Closed,35,35,Waitlist Full (3),R, 12pm, 12:50pm,Bunche Hall 3150,0.0,TA
+MATH0033A,Dis 2E,Closed,32,32,Waitlist Full (3),T, 12pm, 12:50pm,Public Affairs Building 1256,0.0,TA
+MATH0033A,Dis 2F,Closed,32,34,No Waitlist,R, 12pm, 12:50pm,Public Affairs Building 1256,0.0,TA
+MATH0033B,Lec 1,Closed,210,210,Waitlist Full (18),MWF, 9am, 9:50am,Young Hall CS76,4.0,"Zhao, Z."
+MATH0033B,Dis 1A,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Boelter Hall 5280,0.0,TA
+MATH0033B,Dis 1B,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Boelter Hall 5280,0.0,TA
+MATH0033B,Dis 1C,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Boelter Hall 5419,0.0,TA
+MATH0033B,Dis 1D,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Boelter Hall 5419,0.0,TA
+MATH0033B,Dis 1E,Closed,35,35,Waitlist Full (3),T, 9am, 9:50am,Boelter Hall 5272,0.0,TA
+MATH0033B,Dis 1F,Closed,35,35,Waitlist Full (3),R, 9am, 9:50am,Boelter Hall 5272,0.0,TA
+MATH0033B,Lec 2,Closed,210,210,Waitlist Full (18),MWF, 2pm, 2:50pm,Mathematical Sciences 4000A,4.0,"Munoz, S."
+MATH0033B,Dis 2A,Closed,35,35,Waitlist Full (3),T, 2pm, 2:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0033B,Dis 2B,Closed,35,35,Waitlist Full (3),R, 2pm, 2:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0033B,Dis 2C,Closed,35,35,Waitlist Full (3),T, 2pm, 2:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0033B,Dis 2D,Closed,35,35,Waitlist Full (3),R, 2pm, 2:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0033B,Dis 2E,Closed,35,35,Waitlist Full (3),T, 2pm, 2:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0033B,Dis 2F,Closed,35,35,Waitlist Full (3),R, 2pm, 2:50pm,Mathematical Sciences 5138,0.0,TA
+MATH0061,Lec 1,Waitlist,0,0,12 of 18 Taken,MWF, 2pm, 2:50pm,Franz Hall 1178,4.0,"Soskin, D."
+MATH0061,Dis 1A,Waitlist,0,0,1 of 3 Taken,T, 2pm, 2:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0061,Dis 1B,Closed,35,35,Waitlist Full (3),R, 2pm, 2:50pm,Mathematical Sciences 5137,0.0,TA
+MATH0061,Dis 1C,Waitlist,0,0,1 of 3 Taken,T, 2pm, 2:50pm,Geology Building 4645,0.0,TA
+MATH0061,Dis 1D,Waitlist,0,0,2 of 3 Taken,R, 2pm, 2:50pm,Geology Building 4645,0.0,TA
+MATH0061,Dis 1E,Closed,35,35,Waitlist Full (3),T, 2pm, 2:50pm,Mathematical Sciences 6229,0.0,TA
+MATH0061,Dis 1F,Waitlist,0,0,2 of 3 Taken,R, 2pm, 2:50pm,Mathematical Sciences 6229,0.0,TA
+MATH0061,Lec 2,Open,140,105,0 of 12 Taken,MWF, 3pm, 3:50pm,Mathematical Sciences 4000A,4.0,"Kasum, O."
+MATH0061,Dis 2A,Waitlist,0,0,0 of 3 Taken,T, 3pm, 3:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0061,Dis 2B,Open,35,25,0 of 3 Taken,R, 3pm, 3:50pm,Mathematical Sciences 5117,0.0,TA
+MATH0061,Dis 2C,Open,35,19,0 of 3 Taken,T, 3pm, 3:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0061,Dis 2D,Open,35,14,0 of 3 Taken,R, 3pm, 3:50pm,Mathematical Sciences 5127,0.0,TA
+MATH0061,Dis 2E,Closed by Dept ,0,0,No Waitlist,T, 3pm, 3:50pm,Dodd Hall 178,0.0,TA
+MATH0061,Dis 2F,Closed by Dept ,0,0,No Waitlist,R, 3pm, 3:50pm,Bunche Hall 2178,0.0,TA
+MATH0074XP,Sem 1,Closed,30,32,No Waitlist,T, 2pm, 3:50pm,Mathematical Sciences 5203,3.0,"Chan, H.H."
+MATH0074XP,Fld 1A,Closed,30,32,No Waitlist,T, 2pm, 3:50pm,Off campus,0.0,"Chan, H.H."
+MATH0105B,Lec 1,Open,25,3,No Waitlist,MW, 1pm, 2:50pm,Mathematical Sciences 6221,4.0,"Lopez, I."
+MATH0106,Lec 1,Cancelled,0,0,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building,4.0,No instructors
+MATH0110A,Lec 1,Closed,40,40,No Waitlist,MWF, 11am, 11:50am,Geology Building 6704,4.0,"Vashaw, K."
+MATH0110B,Lec 1,Open,40,24,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5117,4.0,"Sempliner, J."
+MATH0110BH,Lec 1,Open,40,25,No Waitlist,MWF, 1pm, 1:50pm,Geology Building 6704,4.0,"Xu, Z."
+MATH0114C,Lec 1,Open,40,28,No Waitlist,MWF, 9am, 9:50am,Geology Building 6704,4.0,"Arant, T.J."
 MATH0115A,Lec 1,Closed,40,40,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 6229,5.0,"Yeong, W."
 MATH0115A,Dis 1A,Closed,40,40,No Waitlist,TR, 9am, 9:50am,Mathematical Sciences 6229,0.0,TA
 MATH0115A,Lec 2,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 6229,5.0,"Yeong, W."
 MATH0115A,Dis 2A,Closed,40,40,No Waitlist,TR, 10am, 10:50am,Mathematical Sciences 6229,0.0,TA
-MATH0115A,Lec 3,Open,40,4,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 6229,5.0,"Ma, S."
-MATH0115A,Dis 3A,Open,40,7,No Waitlist,TR, 11am, 11:50am,Mathematical Sciences 6229,0.0,TA
-MATH0115A,Lec 4,Open,40,6,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 6229,5.0,"Moraga, J."
-MATH0115A,Dis 4A,Open,40,9,No Waitlist,TR, 12pm, 12:50pm,Mathematical Sciences 6229,0.0,TA
-MATH0115A,Lec 5,Open,40,31,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 6229,5.0,"Venkatesh, S."
-MATH0115A,Dis 5A,Open,40,37,No Waitlist,TR, 1pm, 1:50pm,Mathematical Sciences 6229,0.0,TA
-MATH0115A,Lec 6,Open,40,2,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6229,5.0,"Nienhaus, J."
-MATH0115A,Dis 6A,Open,40,5,No Waitlist,TR, 3pm, 3:50pm,Mathematical Sciences 6229,0.0,TA
-MATH0115AH,Lec 1,Open,30,0,No Waitlist,MWF, 1pm, 1:50pm,Geology Building 4645,5.0,"Greene, R.E."
-MATH0115AH,Dis 1A,Open,30,0,No Waitlist,TR, 1pm, 1:50pm,Boelter Hall 4283,0.0,TA
-MATH0115B,Lec 1,Open,40,2,No Waitlist,MWF, 11am, 11:50am,Haines Hall 220,4.0,"Xu, Z."
-MATH0118,Lec 1,Open,40,1,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5137,4.0,"Baker, J."
-MATH0120A,Lec 1,Open,40,20,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 5138,4.0,"Ebert, M."
-MATH0131A,Lec 1,Open,40,29,No Waitlist,MWF, 9am, 9:50am,Geology Building 4645,4.0,"Ding, C."
-MATH0131A,Dis 1A,Open,40,32,No Waitlist,T, 9am, 9:50am,Geology Building 4645,0.0,TA
-MATH0131A,Lec 2,Open,40,5,No Waitlist,MWF, 10am, 10:50am,Geology Building 4645,4.0,"Xu, P."
-MATH0131A,Dis 2A,Open,40,5,No Waitlist,T, 10am, 10:50am,Kaufman Hall 101,0.0,TA
-MATH0131A,Lec 3,Open,40,9,No Waitlist,MWF, 11am, 11:50am,Geology Building 4645,4.0,"Xu, P."
-MATH0131A,Dis 3A,Open,40,8,No Waitlist,R, 11am, 11:50am,Boelter Hall 5420,0.0,TA
-MATH0131A,Lec 4,Closed,40,40,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 5138,4.0,"Ding, C."
+MATH0115A,Lec 3,Closed,40,40,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 6229,5.0,"Ma, S."
+MATH0115A,Dis 3A,Closed,40,40,No Waitlist,TR, 11am, 11:50am,Mathematical Sciences 6229,0.0,TA
+MATH0115A,Lec 4,Closed,40,40,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 6229,5.0,"Moraga, J."
+MATH0115A,Dis 4A,Closed,40,40,No Waitlist,TR, 12pm, 12:50pm,Mathematical Sciences 6229,0.0,TA
+MATH0115A,Lec 5,Open,40,39,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 6229,5.0,"Venkatesh, S."
+MATH0115A,Dis 5A,Closed,40,40,No Waitlist,TR, 1pm, 1:50pm,Mathematical Sciences 6229,0.0,TA
+MATH0115A,Lec 6,Closed,40,40,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6229,5.0,"Nienhaus, J."
+MATH0115A,Dis 6A,Closed,40,40,No Waitlist,TR, 3pm, 3:50pm,Mathematical Sciences 6229,0.0,TA
+MATH0115AH,Lec 1,Closed,30,30,No Waitlist,MWF, 1pm, 1:50pm,Geology Building 4645,5.0,"Conley, W.J."
+MATH0115AH,Dis 1A,Closed,30,30,No Waitlist,TR, 1pm, 1:50pm,Boelter Hall 4283,0.0,TA
+MATH0115B,Lec 1,Open,40,37,No Waitlist,MWF, 11am, 11:50am,Haines Hall 220,4.0,"Greene, R.E."
+MATH0118,Lec 1,Open,40,28,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5137,4.0,"Baker, J."
+MATH0120A,Lec 1,Closed,40,40,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 5138,4.0,"Ebert, M."
+MATH0131A,Lec 1,Closed,40,40,No Waitlist,MWF, 9am, 9:50am,Geology Building 4645,4.0,"Ding, C."
+MATH0131A,Dis 1A,Closed,40,40,No Waitlist,T, 9am, 9:50am,Geology Building 4645,0.0,TA
+MATH0131A,Lec 2,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Geology Building 4645,4.0,"Xu, P."
+MATH0131A,Dis 2A,Closed,40,40,No Waitlist,T, 10am, 10:50am,Kaufman Hall 101,0.0,TA
+MATH0131A,Lec 3,Closed,40,40,No Waitlist,MWF, 11am, 11:50am,Geology Building 4645,4.0,"Xu, P."
+MATH0131A,Dis 3A,Closed,40,40,No Waitlist,R, 11am, 11:50am,Boelter Hall 5420,0.0,TA
+MATH0131A,Lec 4,Closed,40,40,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 5138,4.0,"Li, L."
 MATH0131A,Dis 4A,Closed,40,40,No Waitlist,R, 1pm, 1:50pm,Boelter Hall 5436,0.0,TA
-MATH0131A,Lec 5,Open,40,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 6229,4.0,"Altaf, I."
-MATH0131A,Dis 5A,Open,40,0,No Waitlist,R, 2pm, 2:50pm,Boelter Hall 5440,0.0,TA
-MATH0131A,Lec 6,Open,40,0,No Waitlist,MWF, 3pm, 3:50pm,Geology Building 4645,4.0,"Altaf, I."
-MATH0131A,Dis 6A,Open,40,0,No Waitlist,T, 3pm, 3:50pm,Kaufman Hall 101,0.0,TA
-MATH0131AH,Lec 1,Open,40,0,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5138,4.0,"Biskup, M."
-MATH0131AH,Dis 1A,Open,40,0,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5128,0.0,No instructors
-MATH0131B,Lec 1,Open,40,10,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5127,4.0,"Munoz, S."
-MATH0131B,Dis 1A,Open,40,10,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5117,0.0,TA
-MATH0131B,Lec 2,Closed,40,40,No Waitlist,MWF, 2pm, 2:50pm,Public Affairs Building 1222,4.0,"Ding, C."
+MATH0131A,Lec 5,Closed,40,40,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 6229,4.0,"Altaf, I."
+MATH0131A,Dis 5A,Closed,40,40,No Waitlist,R, 2pm, 2:50pm,Boelter Hall 5440,0.0,TA
+MATH0131A,Lec 6,Closed,40,40,No Waitlist,MWF, 3pm, 3:50pm,Geology Building 4645,4.0,"Altaf, I."
+MATH0131A,Dis 6A,Closed,40,40,No Waitlist,T, 3pm, 3:50pm,Kaufman Hall 101,0.0,TA
+MATH0131AH,Lec 1,Closed,40,40,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5138,4.0,"Biskup, M."
+MATH0131AH,Dis 1A,Closed,40,40,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5128,0.0,No instructors
+MATH0131B,Lec 1,Closed,40,40,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5127,4.0,"Ding, C."
+MATH0131B,Dis 1A,Closed,40,40,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5117,0.0,TA
+MATH0131B,Lec 2,Closed,40,40,No Waitlist,MWF, 2pm, 2:50pm,Public Affairs Building 1222,4.0,"Badreddine, R."
 MATH0131B,Dis 2A,Closed,40,40,No Waitlist,R, 2pm, 2:50pm,Public Affairs Building 2232,0.0,TA
-MATH0131BH,Lec 1,Open,40,8,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5118,4.0,The Staff
-MATH0131BH,Dis 1A,Open,40,8,No Waitlist,T, 11am, 11:50am,Bunche Hall 3157,0.0,No instructors
-MATH0132,Lec 1,Open,80,20,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1246,4.0,"Badreddine, R."
-MATH0132,Dis 1A,Open,40,16,No Waitlist,T, 11am, 11:50am,Bunche Hall 3170,0.0,TA
-MATH0132,Dis 1B,Open,40,4,No Waitlist,R, 11am, 11:50am,Bunche Hall 3170,0.0,TA
-MATH0132,Lec 2,Open,80,27,No Waitlist,MWF, 1pm, 1:50pm,Dodd Hall 175,4.0,"Zhao, Z."
-MATH0132,Dis 2A,Open,40,17,No Waitlist,T, 1pm, 1:50pm,Public Affairs Building 2214,0.0,TA
-MATH0132,Dis 2B,Open,40,10,No Waitlist,R, 1pm, 1:50pm,Public Affairs Building 2214,0.0,TA
-MATH0132H,Lec 1,Open,40,10,No Waitlist,MWF, 10am, 10:50am,Geology Building 6704,4.0,"Garnett, J.B."
-MATH0132H,Dis 1A,Open,40,10,No Waitlist,T, 10am, 10:50am,Bunche Hall 3157,0.0,No instructors
-MATH0134,Lec 1,Open,80,45,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1234,4.0,"Nguyen, T."
-MATH0134,Dis 1A,Open,40,37,No Waitlist,T, 11am, 11:50am,Geology Building 4645,0.0,TA
-MATH0134,Dis 1B,Open,40,8,No Waitlist,R, 11am, 11:50am,Geology Building 4645,0.0,TA
-MATH0134,Lec 2,Open,80,6,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5200,4.0,"Zhang, E."
-MATH0134,Dis 2A,Open,40,4,No Waitlist,T, 3pm, 3:50pm,Geology Building 4645,0.0,TA
-MATH0134,Dis 2B,Open,40,2,No Waitlist,R, 3pm, 3:50pm,Geology Building 4645,0.0,TA
-MATH0135,Lec 1,Open,40,9,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5138,4.0,"Marsden, K."
-MATH0135,Lec 2,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5138,4.0,"Marsden, K."
-MATH0142,Lec 1,Open,80,17,No Waitlist,MWF, 9am, 9:50am,Dodd Hall 175,4.0,The Staff
-MATH0142,Dis 1A,Open,40,16,No Waitlist,T, 9am, 9:50am,Royce Hall 160,0.0,TA
-MATH0142,Dis 1B,Open,40,1,No Waitlist,R, 9am, 9:50am,Royce Hall 160,0.0,TA
-MATH0142,Lec 2,Open,80,4,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building 1234,4.0,"Johnson, C.L."
-MATH0142,Dis 2A,Open,40,3,No Waitlist,T, 10am, 10:50am,Public Affairs Building 2250,0.0,TA
-MATH0142,Dis 2B,Open,40,1,No Waitlist,R, 10am, 10:50am,Public Affairs Building 2250,0.0,TA
-MATH0148M,Lec 1,Closed by Dept ,0,0,No Waitlist,TR, 11am, 12:15pm,Geology Building 3656,4.0,"Maierhofer, T.J."
-MATH0151A,Lec 1,Open,80,8,No Waitlist,MWF, 2pm, 2:50pm,Public Affairs Building 1234,4.0,"Zhou, M."
-MATH0151A,Dis 1A,Open,40,8,No Waitlist,T, 2pm, 2:50pm,Geology Building 6704,0.0,TA
-MATH0151A,Dis 1B,Open,40,0,No Waitlist,R, 2pm, 2:50pm,Geology Building 6704,0.0,TA
-MATH0151A,Lec 2,Open,80,3,No Waitlist,MWF, 3pm, 3:50pm,Public Affairs Building 1234,4.0,"Zhou, M."
-MATH0151A,Dis 2A,Open,40,2,No Waitlist,T, 3pm, 3:50pm,Geology Building 6704,0.0,TA
-MATH0151A,Dis 2B,Open,40,1,No Waitlist,R, 3pm, 3:50pm,Geology Building 6704,0.0,TA
-MATH0151A,Lec 3,Open,40,36,No Waitlist,MWF, 4pm, 4:50pm,Boelter Hall 5440,4.0,"Jiang, C."
-MATH0151B,Lec 1,Open,80,8,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1246,4.0,"Tan, H."
-MATH0151B,Dis 1A,Open,40,7,No Waitlist,T, 9am, 9:50am,Geology Building 6704,0.0,TA
-MATH0151B,Dis 1B,Open,40,1,No Waitlist,R, 9am, 9:50am,Geology Building 6704,0.0,TA
-MATH0151B,Lec 2,Open,80,42,No Waitlist,MWF, 1pm, 1:50pm,Public Affairs Building 1246,4.0,"Wong, K."
-MATH0151B,Dis 2A,Open,40,34,No Waitlist,T, 1pm, 1:50pm,Geology Building 6704,0.0,TA
-MATH0151B,Dis 2B,Open,40,8,No Waitlist,R, 1pm, 1:50pm,Geology Building 6704,0.0,TA
-MATH0151B,Lec 3,Open,40,37,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5138,4.0,"Kashefi, A."
-MATH0155,Lec 1,Closed,40,40,No Waitlist,MWF, 2pm, 2:50pm,Geology Building 4645,4.0,"Han, F."
-MATH0156,Lec 1,Open,40,31,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 6627,4.0,"Baker, J."
-MATH0164,Lec 1,Open,80,70,No Waitlist,MWF, 10am, 10:50am,Franz Hall 1178,4.0,"Chen, Y."
-MATH0164,Dis 1A,Closed,40,40,No Waitlist,T, 10am, 10:50am,Bunche Hall 3164,0.0,TA
-MATH0164,Dis 1B,Open,40,30,No Waitlist,R, 10am, 10:50am,Bunche Hall 2178,0.0,TA
-MATH0164,Dis 1C,Closed by Dept ,0,0,No Waitlist,T, 10am, 10:50am,Geology Building 4645,0.0,No instructors
-MATH0164,Dis 1D,Closed by Dept ,0,0,No Waitlist,R, 10am, 10:50am,Geology Building 4645,0.0,No instructors
-MATH0164,Lec 2,Closed by Dept ,0,0,No Waitlist,MWF, 2pm, 2:50pm,No Location,4.0,The Staff
-MATH0164,Dis 2A,Closed by Dept ,0,0,No Waitlist,T, 2pm, 2:50pm,Public Affairs Building 2232,0.0,TA
-MATH0164,Dis 2B,Closed by Dept ,0,0,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences 5118,0.0,TA
-MATH0167,Lec 1,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5118,4.0,"Zhang, W."
-MATH0168,Lec 1,Open,40,8,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5118,4.0,"Climaco, P."
-MATH0170A,Lec 1,Open,40,18,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5147,4.0,"Butson, D."
-MATH0170E,Lec 1,Open,80,1,No Waitlist,MWF, 8am, 8:50am,Dodd Hall 146,4.0,"Baeumler, J."
-MATH0170E,Dis 1A,Open,40,0,No Waitlist,T, 8am, 8:50am,Geology Building 6704,0.0,TA
-MATH0170E,Dis 1B,Open,40,1,No Waitlist,R, 8am, 8:50am,Geology Building 6704,0.0,TA
-MATH0170E,Lec 2,Open,80,1,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1234,4.0,"Baeumler, J."
-MATH0170E,Dis 2A,Open,40,1,No Waitlist,T, 9am, 9:50am,Young Hall 1044,0.0,TA
-MATH0170E,Dis 2B,Open,40,0,No Waitlist,R, 9am, 9:50am,Young Hall 1044,0.0,TA
-MATH0170E,Lec 3,Open,80,6,No Waitlist,MWF, 1pm, 1:50pm,Public Affairs Building 1222,4.0,"Nguyen, T."
-MATH0170E,Dis 3A,Open,40,5,No Waitlist,T, 1pm, 1:50pm,Geology Building 4645,0.0,TA
-MATH0170E,Dis 3B,Open,40,3,No Waitlist,R, 1pm, 1:50pm,Geology Building 4645,0.0,TA
-MATH0170E,Lec 4,Open,80,1,No Waitlist,MWF, 4pm, 4:50pm,Mathematical Sciences 5200,4.0,The Staff
-MATH0170E,Dis 4A,Open,40,0,No Waitlist,T, 4pm, 4:50pm,Geology Building 4645,0.0,TA
-MATH0170E,Dis 4B,Open,40,1,No Waitlist,R, 4pm, 4:50pm,Geology Building 4645,0.0,TA
-MATH0170S,Lec 1,Open,80,33,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1222,4.0,"Farolfi, G."
-MATH0170S,Dis 1A,Open,40,25,No Waitlist,T, 11am, 11:50am,Geology Building 6704,0.0,TA
-MATH0170S,Dis 1B,Open,40,9,No Waitlist,R, 11am, 11:50am,Geology Building 6704,0.0,TA
-MATH0170S,Lec 2,Open,80,4,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building 1222,4.0,The Staff
-MATH0170S,Dis 2A,Open,40,3,No Waitlist,T, 10am, 10:50am,Geology Building 6704,0.0,TA
-MATH0170S,Dis 2B,Open,40,1,No Waitlist,R, 10am, 10:50am,Geology Building 6704,0.0,TA
-MATH0170S,Lec 3,Open,80,3,No Waitlist,MWF, 3pm, 3:50pm,Public Affairs Building 1222,4.0,"Lopez Rivera, P."
-MATH0170S,Dis 3A,Open,40,2,No Waitlist,T, 3pm, 3:50pm,Boelter Hall 5264,0.0,TA
-MATH0170S,Dis 3B,Open,40,1,No Waitlist,R, 3pm, 3:50pm,Boelter Hall 5264,0.0,TA
-MATH0171,Lec 1,Closed,40,40,No Waitlist,MWF, 12pm, 12:50pm,Geology Building 6704,4.0,"Gu, H."
-MATH0174E,Lec 1,Open,80,26,No Waitlist,MWF, 12pm, 12:50pm,Public Affairs Building 1222,4.0,"Weihs, A."
-MATH0174E,Dis 1A,Open,40,24,No Waitlist,T, 12pm, 12:50pm,Geology Building 4645,0.0,TA
-MATH0174E,Dis 1B,Open,40,2,No Waitlist,R, 12pm, 12:50pm,Geology Building 4645,0.0,TA
-MATH0178B,Lec 1,Open,80,17,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1222,4.0,"Voss, M."
-MATH0178B,Dis 1A,Open,40,12,No Waitlist,T, 9am, 9:50am,Boelter Hall 5440,0.0,TA
-MATH0178B,Dis 1B,Open,40,5,No Waitlist,R, 9am, 9:50am,Boelter Hall 5440,0.0,TA
-MATH0180,Lec 1,Open,40,17,No Waitlist,MWF, 2pm, 2:50pm,Geology Building 6704,4.0,"Zhang, W."
-MATH0182,Lec 1,Open,40,16,No Waitlist,MWF, 3pm, 3:50pm,Geology Building 6704,4.0,"Soskin, D."
-MATH0192AM,Sem 1,Closed by Dept ,0,0,No Waitlist,T, 3:30pm, 4:45pm,Moore Hall 100,1.0,"TA, Roper, M.L., Shaked, S."
-MATH0192B,Sem 1,Closed by Dept ,0,0,No Waitlist,R, 3:30pm, 4:45pm,Royce Hall 154,2.0-4.0 Variable,"Roper, M.L., Shaked, S."
-MATH0205B,Lec 1,Open,30,1,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 7608,4.0,"Sharifi, R.T."
-MATH0206B,Lec 1,Open,30,0,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5137,4.0,"Pak, I."
-MATH0207A,Lec 1,Closed by Dept ,0,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5117,4.0,The Staff
-MATH0207B,Lec 1,Open,30,0,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 7608,4.0,"Blasius, D.M."
-MATH0209BM,Lec 1,Open,20,0,0 of 15 Taken,MW, 4pm, 5:50pm,Dodd Hall 78,4.0,"Ostrovsky, R."
-MATH0210B,Lec 1,Open,30,0,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5203,4.0,"Balmer, P."
-MATH0210B,Dis 1A,Open,30,0,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 5203,0.0,TA
-MATH0212A,Lec 1,Open,30,1,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5137,4.0,"Merkurjev, A.S."
-MATH0214A,Lec 1,Open,30,1,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 5127,4.0,"Totaro, B."
-MATH0220B,Lec 1,Open,30,0,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 7608,4.0,"Neeman, I."
-MATH0223S,Lec 1,Open,30,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5137,4.0,"Adkisson, W."
-MATH0225B,Lec 1,Open,30,2,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 7608,4.0,"Sarkar, S."
-MATH0225B,Dis 1A,Open,30,2,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 6221,0.0,TA
-MATH0245B,Lec 1,Open,30,3,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5203,4.0,"Gangbo, W."
-MATH0245B,Dis 1A,Open,30,3,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5203,0.0,TA
-MATH0246B,Lec 1,Open,30,2,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 5203,4.0,"Bonk, M."
-MATH0247A,Lec 1,Open,30,2,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 6201,4.0,"Visan, M."
-MATH0251B,Lec 1,Open,30,1,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 6201,4.0,"Kim, C."
-MATH0254A,Lec 1,Closed by Dept ,0,0,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 6201,4.0,The Staff
-MATH0254B,Lec 1,Open,30,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5203,4.0,"Maldague, D.F."
-MATH0255B,Lec 1,Open,30,1,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 6201,4.0,"Shlyakhtenko, D.Y."
-MATH0266B,Lec 1,Open,30,4,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5117,4.0,"Roper, M.L."
-MATH0266B,Dis 1A,Open,30,4,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5117,0.0,TA
-MATH0266E,Lec 1,Open,30,9,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5117,4.0,"Porter, M.A."
-MATH0269B,Lec 1,Open,30,3,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 6627,4.0,"Osher, S.J."
-MATH0269B,Dis 1A,Open,30,3,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 6627,0.0,TA
-MATH0270B,Lec 1,Open,30,4,No Waitlist,MW, 12:30pm, 1:45pm,Mathematical Sciences 5117,4.0,"Needell, D."
-MATH0275B,Lec 1,Open,30,6,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 5203,4.0,"Yin, J."
-MATH0285I,Sem 1,Open,30,0,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6221,4.0,"Popa, S."
-MATH0285J,Sem 1,Open,30,9,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5117,4.0,"Ryu, E.K."
-MATH0285K,Sem 1,Open,30,0,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6201,4.0,"Menz, G."
 MATH0290A,Sem 1,Closed by Dept ,0,0,No Waitlist,"MWF, R", 9am 9am, 9:50am 9:50am,"Mathematical Sciences 5203, Mathematical Sciences 5203",4.0,No instructors
 MATH0290B,Sem 1,Open,10,0,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 6201,4.0,"Khare, C., Sharifi, R.T."
 MATH0290B,Sem 2,Closed by Dept ,0,0,No Waitlist,W, 4pm, 5:50pm,Mathematical Sciences 6201,4.0,"Hida, H."
 MATH0290B,Sem 3,Open,10,0,No Waitlist,T, 2pm, 2:50pm,Mathematical Sciences 7608,4.0,"Blasius, D.M."
-MATH0290C,Sem 1,Open,10,0,No Waitlist,WF, 3pm, 3:50pm,Mathematical Sciences 5203,4.0,"Rouquier, R.A., Balmer, P., Dhillon, G., Moraga, J., Merkurjev, A.S."
+MATH0290C,Sem 1,Open,10,1,No Waitlist,WF, 3pm, 3:50pm,Mathematical Sciences 5203,4.0,"Rouquier, R.A., Balmer, P., Dhillon, G., Moraga, J., Merkurjev, A.S."
 MATH0290C,Sem 2,Open,10,0,No Waitlist,WF, 4pm, 5:50pm,Mathematical Sciences 5203,4.0,"Totaro, B."
 MATH0290C,Sem 3,Open,10,0,No Waitlist,M, 11am, 11:50am,Mathematical Sciences 5147,4.0,"Balmer, P."
 MATH0290C,Sem 4,Open,10,0,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 6201,4.0,"Marks, A."
@@ -326,12 +212,12 @@ MATH0290C,Sem 5,Open,10,0,No Waitlist,"T, W", 9am 2pm, 9:50am 2:50pm,"Mathematic
 MATH0290D,Sem 1,Open,10,0,No Waitlist,W, 3pm, 5:50pm,Mathematical Sciences 5147,4.0,"Neeman, I."
 MATH0290F,Sem 1,Open,10,1,No Waitlist,W, 4pm, 4:50pm,Mathematical Sciences 7608,4.0,"Xu, Z."
 MATH0290F,Sem 2,Open,10,0,No Waitlist,"WF, M", 3pm 3pm, 3:50pm 3:50pm,"Mathematical Sciences 5118, Mathematical Sciences 5118",4.0,"Honda, K., Sarkar, S."
-MATH0290G,Sem 1,Open,10,0,No Waitlist,TW, 1pm, 2:50pm,Mathematical Sciences 6627,4.0,"Tao, T.C., Bedrossian, J.P., Bonk, M., Visan, M., Killip, R."
+MATH0290G,Sem 1,Open,10,2,No Waitlist,TW, 1pm, 2:50pm,Mathematical Sciences 6627,4.0,"Tao, T.C., Bedrossian, J.P., Bonk, M., Visan, M., Killip, R."
 MATH0290I,Sem 1,Open,10,0,No Waitlist,M, 4pm, 5:50pm,Mathematical Sciences 7608,4.0,"Popa, S."
 MATH0290J,Sem 1,Open,10,1,No Waitlist,MWF, 4pm, 5:50pm,Mathematical Sciences 5117,4.0,"Porter, M.A."
 MATH0290J,Sem 2,Open,10,0,No Waitlist,T, 4pm, 4:50pm,Mathematical Sciences 5117,4.0,"Ryu, E.K."
 MATH0290J,Sem 3,Open,30,0,No Waitlist,MF, 1pm, 1:50pm,Mathematical Sciences 5137,4.0,No instructors
-MATH0290K,Sem 1,Open,10,1,No Waitlist,"M, M", 3pm 4pm, 3:50pm 5:50pm,"Mathematical Sciences 5203, Mathematical Sciences 5203",4.0,"Biskup, M."
+MATH0290K,Sem 1,Open,10,0,No Waitlist,"M, M", 3pm 4pm, 3:50pm 5:50pm,"Mathematical Sciences 5203, Mathematical Sciences 5203",4.0,"Biskup, M."
 MATH0290M,Sem 1,Closed by Dept ,0,0,No Waitlist,"W, W", 1pm 1pm, 1:50pm 1:50pm,"Mathematical Sciences 5147, Mathematical Sciences 5137",4.0,"Rouquier, R.A."
 MATH0290M,Sem 2,Closed by Dept ,0,0,No Waitlist,"F, F", 1pm 2pm, 1:50pm 2:50pm,"Mathematical Sciences 5118, Mathematical Sciences 5118",4.0,"Rouquier, R.A."
 MATH0290M,Sem 3,Closed by Dept ,0,0,No Waitlist,"F, F", 1pm 2pm, 1:50pm 2:50pm,"Mathematical Sciences 5127, Mathematical Sciences 5127",4.0,"Rouquier, R.A."
@@ -346,7 +232,7 @@ MATH0296J,Sem 2,Open,10,0,No Waitlist,M, 4pm, 4:50pm,Mathematical Sciences 5138,
 MATH0296K,Sem 1,Open,10,0,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 6201,1.0,"Biskup, M., Menz, G., Yin, J."
 MATH0296N,Sem 1,Open,10,0,No Waitlist,R, 2pm, 3:50pm,Mathematical Sciences 6201,1.0,"Pak, I."
 MATH0596,Tut 1,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Balmer, P."
-MATH0596,Tut 2,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bedrossian, J.P."
+MATH0596,Tut 2,Closed,1,1,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bedrossian, J.P."
 MATH0596,Tut 3,Open,3,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bernshteyn, A."
 MATH0596,Tut 4,Open,3,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Bertozzi, A."
 MATH0596,Tut 5,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-8.0 Variable,"Biskup, M."
@@ -393,7 +279,7 @@ MATH0596,Tut 45,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-
 MATH0599,Tut 1,Open,2,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Balmer, P."
 MATH0599,Tut 2,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Bedrossian, J.P."
 MATH0599,Tut 3,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Bernshteyn, A."
-MATH0599,Tut 4,Open,5,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Bertozzi, A."
+MATH0599,Tut 4,Open,5,3,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Bertozzi, A."
 MATH0599,Tut 5,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Biskup, M."
 MATH0599,Tut 6,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Blasius, D.M."
 MATH0599,Tut 7,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Bonk, M."
@@ -405,9 +291,9 @@ MATH0599,Tut 12,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variab
 MATH0599,Tut 13,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Gao, Z."
 MATH0599,Tut 14,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Greene, R.E."
 MATH0599,Tut 15,Open,2,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Honda, K."
-MATH0599,Tut 16,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Jiang, C."
+MATH0599,Tut 16,Closed,1,1,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Jiang, C."
 MATH0599,Tut 17,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Khare, C."
-MATH0599,Tut 18,Open,2,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Khitrik, M."
+MATH0599,Tut 18,Open,2,1,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Khitrik, M."
 MATH0599,Tut 19,Open,2,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Killip, R."
 MATH0599,Tut 20,Open,2,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Kim, C."
 MATH0599,Tut 21,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Liu, K."
@@ -424,7 +310,7 @@ MATH0599,Tut 31,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-
 MATH0599,Tut 32,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Popa, S."
 MATH0599,Tut 33,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Porter, M.A."
 MATH0599,Tut 34,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Roper, M.L."
-MATH0599,Tut 35,Open,3,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Rouquier, R.A."
+MATH0599,Tut 35,Open,3,1,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Rouquier, R.A."
 MATH0599,Tut 36,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Ryu, E.K."
 MATH0599,Tut 37,Open,3,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Sarkar, S."
 MATH0599,Tut 38,Open,3,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Schaeffer, H.K."
@@ -436,3 +322,118 @@ MATH0599,Tut 43,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-
 MATH0599,Tut 44,Closed by Dept ,0,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Visan, M."
 MATH0599,Tut 45,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Xu, Z."
 MATH0599,Tut 46,Open,1,0,No Waitlist,Not scheduled,,,No Location,2.0-12.0 Variable,"Yin, J."
+MATH0206B,Lec 1,Open,30,2,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5137,4.0,"Pak, I."
+MATH0207A,Lec 1,Cancelled,0,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences,4.0,No instructors
+MATH0207B,Lec 1,Open,30,0,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 7608,4.0,"Blasius, D.M."
+MATH0209BM,Lec 1,Cancelled,0,0,No Waitlist,MW, 4pm, 5:50pm,Dodd Hall,4.0,No instructors
+MATH0210B,Lec 1,Open,30,3,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5203,4.0,"Balmer, P."
+MATH0210B,Dis 1A,Open,30,3,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 5203,0.0,TA
+MATH0212A,Lec 1,Open,30,5,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5137,4.0,"Merkurjev, A.S."
+MATH0214A,Lec 1,Open,30,1,No Waitlist,MWF, 4pm, 4:50pm,Mathematical Sciences 5118,4.0,"Totaro, B."
+MATH0220B,Lec 1,Open,30,3,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 7608,4.0,"Neeman, I."
+MATH0223S,Lec 1,Open,30,2,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5137,4.0,"Adkisson, W."
+MATH0225B,Lec 1,Open,30,4,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 7608,4.0,"Sarkar, S."
+MATH0225B,Dis 1A,Open,30,4,No Waitlist,T, 12pm, 12:50pm,Mathematical Sciences 6221,0.0,TA
+MATH0245B,Lec 1,Open,30,10,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5203,4.0,"Gangbo, W."
+MATH0245B,Dis 1A,Open,30,10,No Waitlist,R, 11am, 11:50am,Mathematical Sciences 5203,0.0,TA
+MATH0246B,Lec 1,Open,30,7,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 5203,4.0,"Bonk, M."
+MATH0247A,Lec 1,Open,30,9,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 6201,4.0,"Visan, M."
+MATH0251B,Lec 1,Open,30,5,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 6201,4.0,"Kim, C."
+MATH0254A,Lec 1,Cancelled,0,0,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences,4.0,No instructors
+MATH0254B,Lec 1,Open,30,5,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences 5203,4.0,"Maldague, D.F."
+MATH0255B,Lec 1,Open,30,3,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 6201,4.0,"Shlyakhtenko, D.Y."
+MATH0266B,Lec 1,Open,30,6,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5117,4.0,"Roper, M.L."
+MATH0266B,Dis 1A,Open,30,6,No Waitlist,T, 11am, 11:50am,Mathematical Sciences 5117,0.0,TA
+MATH0266E,Lec 1,Open,30,13,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5117,4.0,"Porter, M.A."
+MATH0269B,Lec 1,Open,30,8,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 6627,4.0,"Osher, S.J."
+MATH0269B,Dis 1A,Open,30,8,No Waitlist,R, 10am, 10:50am,Mathematical Sciences 6627,0.0,TA
+MATH0270B,Lec 1,Open,30,9,No Waitlist,MW, 12:30pm, 1:45pm,Mathematical Sciences 5117,4.0,"Needell, D."
+MATH0275B,Lec 1,Open,30,18,No Waitlist,MWF, 1pm, 1:50pm,Mathematical Sciences 5203,4.0,"Yin, J."
+MATH0285I,Sem 1,Open,30,0,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6221,4.0,"Popa, S."
+MATH0285J,Sem 1,Open,30,12,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5117,4.0,"Ryu, E.K."
+MATH0285K,Sem 1,Open,30,2,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 6201,4.0,"Menz, G."
+MATH0131BH,Lec 1,Open,40,31,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 5118,4.0,The Staff
+MATH0131BH,Dis 1A,Open,40,31,No Waitlist,T, 11am, 11:50am,Bunche Hall 3157,0.0,No instructors
+MATH0132,Lec 1,Open,80,75,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1246,4.0,"Honda, K."
+MATH0132,Dis 1A,Open,40,39,No Waitlist,T, 11am, 11:50am,Bunche Hall 3170,0.0,TA
+MATH0132,Dis 1B,Open,40,36,No Waitlist,R, 11am, 11:50am,Bunche Hall 3170,0.0,TA
+MATH0132,Lec 2,Closed,80,80,No Waitlist,MWF, 1pm, 1:50pm,Dodd Hall 175,4.0,"Zhao, Z."
+MATH0132,Dis 2A,Closed,40,40,No Waitlist,T, 1pm, 1:50pm,Public Affairs Building 2214,0.0,TA
+MATH0132,Dis 2B,Closed,40,40,No Waitlist,R, 1pm, 1:50pm,Public Affairs Building 2214,0.0,TA
+MATH0132H,Lec 1,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Geology Building 6704,4.0,"Garnett, J.B."
+MATH0132H,Dis 1A,Closed,40,40,No Waitlist,T, 10am, 10:50am,Bunche Hall 3157,0.0,No instructors
+MATH0134,Lec 1,Closed,80,80,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1234,4.0,"Kashefi, A."
+MATH0134,Dis 1A,Closed,40,40,No Waitlist,T, 11am, 11:50am,Geology Building 4645,0.0,TA
+MATH0134,Dis 1B,Closed,40,40,No Waitlist,R, 11am, 11:50am,Geology Building 4645,0.0,TA
+MATH0134,Lec 2,Closed,80,80,No Waitlist,MWF, 3pm, 3:50pm,Mathematical Sciences 5200,4.0,"Zhang, E."
+MATH0134,Dis 2A,Closed,40,40,No Waitlist,T, 3pm, 3:50pm,Geology Building 4645,0.0,TA
+MATH0134,Dis 2B,Closed,40,40,No Waitlist,R, 3pm, 3:50pm,Geology Building 4645,0.0,TA
+MATH0135,Lec 1,Closed,40,40,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5138,4.0,"Marsden, K."
+MATH0135,Lec 2,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5138,4.0,"Marsden, K."
+MATH0142,Lec 1,Closed,80,80,No Waitlist,MWF, 9am, 9:50am,Dodd Hall 175,4.0,"Munoz, S."
+MATH0142,Dis 1A,Closed,40,40,No Waitlist,T, 9am, 9:50am,Royce Hall 160,0.0,TA
+MATH0142,Dis 1B,Open,40,39,No Waitlist,R, 9am, 9:50am,Royce Hall 160,0.0,TA
+MATH0142,Lec 2,Open,80,37,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building 1234,4.0,"Johnson, C.L."
+MATH0142,Dis 2A,Open,40,29,No Waitlist,T, 10am, 10:50am,Public Affairs Building 2250,0.0,TA
+MATH0142,Dis 2B,Open,40,8,No Waitlist,R, 10am, 10:50am,Public Affairs Building 2250,0.0,TA
+MATH0148M,Lec 1,Closed by Dept ,0,0,No Waitlist,TR, 11am, 12:15pm,Geology Building 3656,4.0,"Maierhofer, T.J."
+MATH0151A,Lec 1,Closed,80,80,No Waitlist,MWF, 2pm, 2:50pm,Public Affairs Building 1234,4.0,"Zhou, M."
+MATH0151A,Dis 1A,Closed,40,40,No Waitlist,T, 2pm, 2:50pm,Geology Building 6704,0.0,TA
+MATH0151A,Dis 1B,Closed,40,40,No Waitlist,R, 2pm, 2:50pm,Geology Building 6704,0.0,TA
+MATH0151A,Lec 2,Closed,80,80,No Waitlist,MWF, 3pm, 3:50pm,Public Affairs Building 1234,4.0,"Zhou, M."
+MATH0151A,Dis 2A,Closed,40,40,No Waitlist,T, 3pm, 3:50pm,Geology Building 6704,0.0,TA
+MATH0151A,Dis 2B,Open,40,39,No Waitlist,R, 3pm, 3:50pm,Geology Building 6704,0.0,TA
+MATH0151A,Lec 3,Closed,40,40,No Waitlist,MWF, 4pm, 4:50pm,Boelter Hall 5440,4.0,"Jiang, C."
+MATH0151B,Lec 1,Open,80,53,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1246,4.0,"Kashefi, A."
+MATH0151B,Dis 1A,Closed,40,40,No Waitlist,T, 9am, 9:50am,Geology Building 6704,0.0,TA
+MATH0151B,Dis 1B,Open,40,13,No Waitlist,R, 9am, 9:50am,Geology Building 6704,0.0,TA
+MATH0151B,Lec 2,Closed,80,80,No Waitlist,MWF, 1pm, 1:50pm,Public Affairs Building 1246,4.0,"Wong, K."
+MATH0151B,Dis 2A,Closed,40,40,No Waitlist,T, 1pm, 1:50pm,Geology Building 6704,0.0,TA
+MATH0151B,Dis 2B,Closed,40,40,No Waitlist,R, 1pm, 1:50pm,Geology Building 6704,0.0,TA
+MATH0151B,Lec 3,Cancelled,0,0,No Waitlist,MWF, 2pm, 2:50pm,Mathematical Sciences,4.0,No instructors
+MATH0155,Lec 1,Cancelled,0,0,No Waitlist,MWF, 2pm, 2:50pm,Geology Building,4.0,No instructors
+MATH0156,Lec 1,Closed,40,40,No Waitlist,MWF, 12pm, 12:50pm,Mathematical Sciences 6627,4.0,"Baker, J."
+MATH0164,Lec 1,Closed,80,80,No Waitlist,MWF, 10am, 10:50am,Franz Hall 1178,4.0,"Chen, Y."
+MATH0164,Dis 1A,Closed,40,40,No Waitlist,T, 10am, 10:50am,Bunche Hall 3164,0.0,TA
+MATH0164,Dis 1B,Closed,40,40,No Waitlist,R, 10am, 10:50am,Bunche Hall 2178,0.0,TA
+MATH0164,Dis 1C,Closed by Dept ,0,0,No Waitlist,T, 10am, 10:50am,Geology Building 4645,0.0,No instructors
+MATH0164,Dis 1D,Closed by Dept ,0,0,No Waitlist,R, 10am, 10:50am,Geology Building 4645,0.0,No instructors
+MATH0164,Lec 2,Cancelled,0,0,No Waitlist,MWF, 2pm, 2:50pm,No Location,4.0,No instructors
+MATH0164,Dis 2A,Cancelled,0,0,No Waitlist,T, 2pm, 2:50pm,Public Affairs Building,0.0,No instructors
+MATH0164,Dis 2B,Cancelled,0,0,No Waitlist,R, 2pm, 2:50pm,Mathematical Sciences,0.0,No instructors
+MATH0167,Lec 1,Closed,40,40,No Waitlist,MWF, 10am, 10:50am,Mathematical Sciences 5118,4.0,"Zhang, W."
+MATH0168,Lec 1,Closed,40,40,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5118,4.0,"Climaco, P."
+MATH0170A,Lec 1,Open,40,28,No Waitlist,MWF, 9am, 9:50am,Mathematical Sciences 5147,4.0,"Butson, D."
+MATH0170E,Lec 1,Open,80,61,No Waitlist,MWF, 8am, 8:50am,Dodd Hall 146,4.0,"Baeumler, J."
+MATH0170E,Dis 1A,Open,40,37,No Waitlist,T, 8am, 8:50am,Geology Building 6704,0.0,TA
+MATH0170E,Dis 1B,Open,40,28,No Waitlist,R, 8am, 8:50am,Geology Building 6704,0.0,TA
+MATH0170E,Lec 2,Closed,80,80,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1234,4.0,"Lopez Rivera, P."
+MATH0170E,Dis 2A,Closed,40,40,No Waitlist,T, 9am, 9:50am,Young Hall 1044,0.0,TA
+MATH0170E,Dis 2B,Closed,40,40,No Waitlist,R, 9am, 9:50am,Young Hall 1044,0.0,TA
+MATH0170E,Lec 3,Closed,80,80,No Waitlist,MWF, 1pm, 1:50pm,Public Affairs Building 1222,4.0,"Nguyen, T."
+MATH0170E,Dis 3A,Closed,40,40,No Waitlist,T, 1pm, 1:50pm,Geology Building 4645,0.0,TA
+MATH0170E,Dis 3B,Closed,40,40,No Waitlist,R, 1pm, 1:50pm,Geology Building 4645,0.0,TA
+MATH0170E,Lec 4,Closed,80,80,No Waitlist,MWF, 4pm, 4:50pm,Mathematical Sciences 5200,4.0,"Nguyen, T."
+MATH0170E,Dis 4A,Closed,40,40,No Waitlist,T, 4pm, 4:50pm,Geology Building 4645,0.0,TA
+MATH0170E,Dis 4B,Closed,40,40,No Waitlist,R, 4pm, 4:50pm,Geology Building 4645,0.0,TA
+MATH0170S,Lec 1,Closed,80,80,No Waitlist,MWF, 11am, 11:50am,Public Affairs Building 1222,4.0,"Farolfi, G."
+MATH0170S,Dis 1A,Closed,40,40,No Waitlist,T, 11am, 11:50am,Geology Building 6704,0.0,TA
+MATH0170S,Dis 1B,Closed,40,40,No Waitlist,R, 11am, 11:50am,Geology Building 6704,0.0,TA
+MATH0170S,Lec 2,Closed,80,80,No Waitlist,MWF, 10am, 10:50am,Public Affairs Building 1222,4.0,"Zhang, Z."
+MATH0170S,Dis 2A,Closed,40,40,No Waitlist,T, 10am, 10:50am,Geology Building 6704,0.0,TA
+MATH0170S,Dis 2B,Closed,40,40,No Waitlist,R, 10am, 10:50am,Geology Building 6704,0.0,TA
+MATH0170S,Lec 3,Open,80,69,No Waitlist,MWF, 3pm, 3:50pm,Public Affairs Building 1222,4.0,"Zhang, Z."
+MATH0170S,Dis 3A,Closed,40,40,No Waitlist,T, 3pm, 3:50pm,Boelter Hall 5264,0.0,TA
+MATH0170S,Dis 3B,Open,40,33,No Waitlist,R, 3pm, 3:50pm,Boelter Hall 5264,0.0,TA
+MATH0171,Lec 1,Closed,40,40,No Waitlist,MWF, 12pm, 12:50pm,Geology Building 6704,4.0,"Gu, H."
+MATH0174E,Lec 1,Open,80,55,No Waitlist,MWF, 12pm, 12:50pm,Public Affairs Building 1222,4.0,"Weihs, A."
+MATH0174E,Dis 1A,Closed,40,40,No Waitlist,T, 12pm, 12:50pm,Geology Building 4645,0.0,TA
+MATH0174E,Dis 1B,Open,40,15,No Waitlist,R, 12pm, 12:50pm,Geology Building 4645,0.0,TA
+MATH0178B,Lec 1,Open,80,41,No Waitlist,MWF, 9am, 9:50am,Public Affairs Building 1222,4.0,"Voss, M."
+MATH0178B,Dis 1A,Open,40,32,No Waitlist,T, 9am, 9:50am,Boelter Hall 5440,0.0,TA
+MATH0178B,Dis 1B,Open,40,9,No Waitlist,R, 9am, 9:50am,Boelter Hall 5440,0.0,TA
+MATH0180,Lec 1,Closed,40,40,No Waitlist,MWF, 2pm, 2:50pm,Geology Building 6704,4.0,"Zhang, W."
+MATH0182,Lec 1,Closed,40,40,No Waitlist,MWF, 3pm, 3:50pm,Geology Building 6704,4.0,"Soskin, D."
+MATH0192AM,Sem 1,Closed by Dept ,0,0,No Waitlist,T, 3:30pm, 4:45pm,Moore Hall 100,1.0,"TA, Roper, M.L., Shaked, S."
+MATH0192B,Sem 1,Closed by Dept ,0,0,No Waitlist,R, 3:30pm, 4:45pm,Royce Hall 154,2.0-4.0 Variable,"Roper, M.L., Shaked, S."
+MATH0205B,Lec 1,Open,30,1,No Waitlist,MWF, 11am, 11:50am,Mathematical Sciences 7608,4.0,"Sharifi, R.T."
