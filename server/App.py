@@ -5,56 +5,58 @@ import os
 import json
 import csv
 import waitress
-from dotenv import load_dotenv
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
-from flask_jwt_extended import create_access_token, JWTManager, jwt_required, get_jwt_identity
+from flask_jwt_extended import create_access_token, JWTManager, jwt_required, get_jwt_identity, set_access_cookies
 import shutil
+
+from google.oauth2 import id_token
+from google.auth.transport import requests
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
 
 # Initialize JWTManager
-app.config['JWT_SECRET_KEY'] = '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'  # Replace with your own secret key
+app.config['JWT_SECRET_KEY'] = 'placeholder' 
+
+app.config['JWT_COOKIE_CSRF_PROTECT'] = False # Enable in production
+
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
+
+# DISABLING Secure allows cookies over HTTP (localhost)
+app.config['JWT_COOKIE_SECURE'] = False 
+
+# Lax is required for localhost non-https
+app.config['JWT_COOKIE_SAMESITE'] = 'Lax' 
+
 jwt = JWTManager(app)
 
-load_dotenv()  # Load the environment variables from the .env file
-
-GOOGLE_CLIENT_ID = os.environ['GOOGLE_CLIENT_ID']
-GOOGLE_SECRET_KEY = os.environ['GOOGLE_SECRET_KEY']
+GOOGLE_CLIENT_ID = "454930251106-d7a2pe23cnivc8aehsehh4bkjbbvgna1.apps.googleusercontent.com"
 
 @app.route('/login', methods=['POST'])
-def login2():
-    return jsonify(message="LOL SO GAY"), 200
+def google_auth():
+    data = request.get_json()
+    auth_code = request.get_json()['credentials']
 
-@app.route('/google/auth', methods=['POST'])
-def login():
-    auth_code = request.get_json()['code']
+    try:
+        id_info = id_token.verify_oauth2_token(
+            auth_code,
+            requests.Request(),
+            GOOGLE_CLIENT_ID
+        )
+        
+        user_email = id_info['email']
+        access_token = create_access_token(identity=user_email)
 
-    data = {
-        'code': auth_code,
-        'client_id': GOOGLE_CLIENT_ID,  # client ID from the credential at google developer console
-        'client_secret': GOOGLE_SECRET_KEY,  # client secret from the credential at google developer console
-        'redirect_uri': 'postmessage',
-        'grant_type': 'authorization_code'
-    }
+        # 3. Create response and set cookie
+        response = jsonify({"msg": "Login Success", "user": user_email})
+        set_access_cookies(response, access_token)
 
-    response = requests.post('https://oauth2.googleapis.com/token', data=data).json()
-    headers = {
-        'Authorization': f'Bearer {response["access_token"]}'
-    }
-    user_info = requests.get('https://www.googleapis.com/oauth2/v3/userinfo', headers=headers).json()
+        return response,200
 
-    """
-        check here if user exists in database, if not, add him
-    """
-
-    jwt_token = create_access_token(identity=user_info['email'])  # create jwt token
-    response = jsonify(user=user_info)
-    response.set_cookie('access_token_cookie', value=jwt_token, secure=True)
-
-    return response, 200
+    except Exception as e:
+        return "FUCKING HAACKER, YOU ARE FUCKING INVALID AUTHENTICATION", 401
 
 
 # Protect a route with jwt_required, which will kick out requests
@@ -64,6 +66,8 @@ def login():
 def protected():
     # Access the identity of the current user with get_jwt_identity
     jwt_token = request.cookies.get('access_token_cookie') # Demonstration how to get the cookie
+    print(jwt_token)
+
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user), 200
 
@@ -86,11 +90,6 @@ def copy():
             shutil.copy(file_path,f"{last_sec_path}/{filename}")
 
     return "nice Job!"
-
-#default interface
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
 
 #get CSV data
 @app.route("/get", methods = ['GET'])
@@ -132,6 +131,11 @@ def displayChanges():
 
     common_files = subject_paths.intersection(last_subject_paths)
             
+
+#default interface
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
 
 #main function
 if __name__ == '__main__':
