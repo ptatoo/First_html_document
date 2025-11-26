@@ -29,5 +29,3 @@ dist-ssr
 **/last_section_data/*
 !**/section_data/MATH.csv
 !**/last_section_data/MATH.csv
-
-.env
