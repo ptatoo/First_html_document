@@ -21,7 +21,6 @@ app = Flask(__name__)
 CORS(app)
 CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
 
-<<<<<<< HEAD
 load_dotenv() 
 #loading env vars
 USER_DB_PATH = os.getenv("USER_DB_PATH")
@@ -42,24 +41,6 @@ app.config['JWT_COOKIE_SAMESITE'] = 'Lax'
 #initializing JWT Manager
 jwt = JWTManager(app)
 
-=======
-# Initialize JWTManager
-app.config['JWT_SECRET_KEY'] = 'placeholder' 
-
-app.config['JWT_COOKIE_CSRF_PROTECT'] = False # Enable in production
-
-app.config['JWT_TOKEN_LOCATION'] = ['cookies']
-
-# DISABLING Secure allows cookies over HTTP (localhost)
-app.config['JWT_COOKIE_SECURE'] = False 
-
-# Lax is required for localhost non-https
-app.config['JWT_COOKIE_SAMESITE'] = 'Lax' 
-
-jwt = JWTManager(app)
-
-GOOGLE_CLIENT_ID = "454930251106-d7a2pe23cnivc8aehsehh4bkjbbvgna1.apps.googleusercontent.com"
->>>>>>> 9677ed8a4988dd9d3128a295ae484fdf3f9d2479
 
 @app.route('/login', methods=['POST'])
 def google_auth():
@@ -72,20 +53,14 @@ def google_auth():
             requests.Request(),
             GOOGLE_CLIENT_ID
         )
-<<<<<<< HEAD
         user_email = id_info['email']
         user_given_name = id_info['given_name']
-=======
-        
-        user_email = id_info['email']
->>>>>>> 9677ed8a4988dd9d3128a295ae484fdf3f9d2479
         access_token = create_access_token(identity=user_email)
 
         # 3. Create response and set cookie
         response = jsonify({"msg": "Login Success", "user": user_email})
         set_access_cookies(response, access_token)
 
-<<<<<<< HEAD
         # 4. log user into db
         db = sqlite3.connect(USER_DB_PATH, timeout=5.0)  
         cur = db.cursor()   
@@ -104,16 +79,6 @@ def google_auth():
         return "Invalid Authentication", 401
 
 # Protect a route with jwt_required, which will kick out requests without a vaalid JWT present.
-=======
-        return response,200
-
-    except Exception as e:
-        return "FUCKING HAACKER, YOU ARE FUCKING INVALID AUTHENTICATION", 401
-
-
-# Protect a route with jwt_required, which will kick out requests
-# without a valid JWT present.
->>>>>>> 9677ed8a4988dd9d3128a295ae484fdf3f9d2479
 @app.route("/protected", methods=["GET"])
 @jwt_required()
 def protected():
@@ -127,7 +92,7 @@ def protected():
 @app.route('/update')
 def update():
     copy()
-    result = SoC_Scraper("Subjects.txt", sec_path)
+    result = SoC_Scraper("Subjects.txt", SEC_PATH)
     return result
 
 def copy():
@@ -185,7 +150,6 @@ def displayChanges():
 def hello_world():
     return "Hello, World!"
 
-<<<<<<< HEAD
 @app.route("/test")
 def test():
     db = sqlite3.connect(USER_DB_PATH, timeout=5.0)  
@@ -221,8 +185,6 @@ def setupSQLite():
     db.close()
     
 
-=======
->>>>>>> 9677ed8a4988dd9d3128a295ae484fdf3f9d2479
 #main function
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
