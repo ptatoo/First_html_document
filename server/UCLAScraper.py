@@ -26,8 +26,11 @@ def parseStatus(text: str):
         return [status] + re.findall(r'\d+', texts[1])[:2]  
     elif status == "Closed":
         return [status] + ((raw := re.findall(r'\d+', texts[1]) + [0])[:1] + [int(raw[1]) + int(raw[0])])[::-1]
+    elif status == "Waitlist":
+        return [status] + ((raw := re.findall(r'\d+', texts[1]) + [0])[:1] + [int(raw[1]) + int(raw[0])])[::-1]
+
     else:
-        return [status, 0, 0]
+        return [status, -1, -1]
 
 def parseTime(text: str):
     lines = text.split("\n")

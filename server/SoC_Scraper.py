@@ -56,6 +56,7 @@ def SoC_Scraper(subjects_path, section_directory):
         print(f"Starting {len(job_args)} workers to scrape {len(subjectID_list)} subjects.")
         print("-" * 50)
         print(job_args)
+        
         # PROCESS POOL EXECUTOR
         with ProcessPoolExecutor(max_workers=num_workers) as executor:
             executor.map(wrapper_worker, job_args)
